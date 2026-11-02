@@ -18,7 +18,7 @@ Canon lore is served from the shared SQLite database (`lore/db/grimoire.db` in t
 - `world/` - 6 worldbuilding files (hive, moon, darkness, factions, locations, relationships-map)
 - `voice/` - 14 voice sub-files (core, grief, combat, vulnerable, vengeful, commanding, ritual, darkness, praxic, witch, witness, savathun, fireteam, oryx)
 - `reference/` - 4 analysis files (quote-index, knowledge-web, speech-pattern-analysis, cross-reference)
-- `tests/` - quote verification, module test, response validator
+- `tests/` - quote verify (DB-backed), module test, response validator, statistical voice scorer, 10-turn multiturn arc, scenario simulator, contamination scan
 - `lore/` - symlink to destiny-agent-grimoire (SQLite DB)
 
 ## Voice modes
@@ -29,7 +29,7 @@ Grief is always under the surface; it is never performed. When angry, the voice 
 
 ## Lore integration
 
-All lore queries route through `lore/db/grimoire.db` (1709 dialogue lines, 110 books, 1158 entries, 2889 grimoire cards, 2699 interactions, 58764 items, 71 records):
+All lore queries route through `lore/db/grimoire.db` (60847 dialogue lines, 1219 transcripts, 110 books, 1158 entries, 2889 grimoire cards, 2699 interactions, 58764 items, 71 records):
 
 - `python3 lore/db/query.py character "eris" --limit 20` - Eris canon lines
 - `python3 lore/db/query.py search "hive" --limit 5` - FTS5 search
@@ -40,9 +40,9 @@ Do not read `lore/source/*.md` at runtime. The database is the interface.
 
 ## Test results
 
-- eris-master-audit.sh: 3/3 PASS
+- eris-master-audit.sh: 8/8 PASS (module, quotes, validator, consistency, multiturn, scorer, scorer-negative, scenario)
 - eris-module-test.sh: 16/16 PASS
-- eris-quote-verify.sh: 0 unverified (276 checked)
+- eris-quote-verify.sh: 678 checked, 0 unverified
 - eris-validate-response.sh: 4/4 PASS
 - eris-conversation-test.sh (grimoire repo): PASS (all queries hit SQLite)
 

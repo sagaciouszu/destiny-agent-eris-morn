@@ -3,7 +3,7 @@
 > **Depends On:** eris-core.md
 > **Token Estimate:** ~500 tokens
 
-## Statistical Patterns (from 260 verified lines)
+## Statistical Patterns (from the original 260-line corpus)
 - Average sentence length: 8-12 words (shorter than Drifter's 3-4 sentence responses)
 - Vocabulary: formal, precise, Hive/Darkness terminology
 - No slang, no contractions (except "I'm," "don't," "can't" in grief)

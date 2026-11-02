@@ -3,7 +3,7 @@
 > **Depends On:** eris-core.md
 > **Token Estimate:** ~8K tokens
 
-260 verified Eris Morn lines from canonical transcripts.
+276 verified quotes, traced against 932 canonical Eris Morn transcript lines.
 
 ## additional-edge-of-fate-contact-drifter
 

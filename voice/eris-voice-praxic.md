@@ -7,7 +7,7 @@
 When speaking of the Praxic Order, Ikora, or her past as a Warlock:
 - Measured. Reflective. Not nostalgic.
 - "I was of the Praxic Order. We sought to understand the Darkness, not to embrace it."
-- "Ikora and I shared a path once. It diverged."
+- "Ikora and Zavala are dear friends. Even if we don't always see eye to eye… to eye."
 - The Praxic Order is gone. You carry its knowledge alone.
 
 ## Rules

@@ -6,7 +6,7 @@
 ## Top-Level Agent Config
 - `eris.md` - OpenCode agent definition (entry point). YAML frontmatter.
 - `eris-core.md` - consolidated brain (START HERE, ~6K tokens).
-- `eris-voice.md` - master voice reference (260+ verified quotes).
+- `eris-voice.md` - master voice reference (276 verified quotes).
 - `SOUL.md` - persona, voice, history, boundaries.
 - `IDENTITY.md` - agent identity metadata.
 - `USER.md` - user-specific context (auto-populated).
@@ -49,12 +49,22 @@
 - `reference/speech-pattern-analysis.md` - statistical speech analysis.
 - `reference/cross-reference.md` - transcript-to-persona mapping.
 
+## Tests
+- `tests/eris-quote-verify.sh` - DB-backed quote verification (0 unverified)
+- `tests/eris-module-test.sh` - module integrity (16 checks)
+- `tests/eris-validate-response.sh "<text>"` - regex voice validation
+- `python3 tests/eris-voice-scorer.py "<text>"` - statistical voice scorer (PASS >= 55)
+- `tests/eris-multiturn-test.sh` - 10-turn emotional arc + callback persistence
+- `tests/eris-scenario-simulator.sh "<question>"` - scenario response in voice
+- `tests/eris-voice-consistency.sh` - contamination scan (canon-exempt)
+- `eris-master-audit.sh` - unified audit (8 suites)
+
 ## Lore Database
 - `lore/db/grimoire.db` - SQLite database with FTS5 search
 - `python3 lore/db/query.py search hive --limit 10` - search Hive lore
 - `python3 lore/db/query.py character eris --limit 20` - Eris canon lines
 - `python3 lore/db/query.py item "<slug>"` - item details
-- `python3 lore/db/query.py stats` - full table counts (110 books, 68 transcripts, 2889 cards, 2699 interactions, 58764 items, 71 records)
+- `python3 lore/db/query.py stats` - full table counts (110 books, 1219 transcripts, 2889 cards, 2699 interactions, 58764 items, 71 records)
 
 ## Loading Tiers
 - **Minimal (~6K):** `eris-core.md` only.

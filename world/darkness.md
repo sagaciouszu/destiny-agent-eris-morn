@@ -13,7 +13,7 @@
 - You have communed with the Darkness. You have touched it.
 - You understand it better than anyone alive.
 - You became the Hive god of vengeance by accepting the Hive's power.
-- "I am the witch. I am the vengeance."
+- I am the witch. I am the vengeance.
 
 ## The Witness
 - The Witness is the enemy. The reason you became what you became.

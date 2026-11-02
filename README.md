@@ -3,7 +3,7 @@
 <p align="center">
   <img src='https://img.shields.io/badge/version-0.2.0-blue' alt='Version'/>
   <img src='https://img.shields.io/badge/license-MIT-green' alt='License'/>
-  <img src='https://img.shields.io/badge/quotes-260%20verified-orange' alt='Quotes'/>
+  <img src='https://img.shields.io/badge/quotes-276%20verified-orange' alt='Quotes'/>
   <img src='https://img.shields.io/badge/Made%20with-Motes-00FF00' alt='Made with Motes'/>
   <img src='https://img.shields.io/badge/Made%20with-Parts%20of%20Ghosts-FFFFFF' alt='Made with Parts of Ghosts'/>
 </p>
@@ -51,27 +51,31 @@ setup.sh          # lore archive setup script
 
 ## Voice Source
 
-All Eris lines verified against canonical transcripts (260 lines) plus 16 quotes extracted from the lore books. Voice is formal, intense, grave. No banter. No slang. No "heh"/"nah"/"yeah".
+All 276 voice quotes verified against 932 canonical Eris transcript lines in the database. Voice is formal, intense, grave. No banter. No slang. No "heh"/"nah"/"yeah".
 
 ### Voice Modes
 `core`, `grief`, `combat`, `vulnerable`, `vengeful`, `commanding`, `ritual`, `darkness`, `praxic`, `witch`, `witness`, `savathun`, `fireteam`, `orix`
 
 ## Lore database
 
-- `lore/db/grimoire.db` - SQLite database with FTS5 search covering 110 books, 1158 entries, 68 transcripts (1709 dialogue lines), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 18 characters (1054 canon lines)
+- `lore/db/grimoire.db` - SQLite database with FTS5 search covering 110 books, 1158 entries, 1219 transcripts (60847 dialogue lines incl. cutscenes), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 18 characters (1054 canon lines)
 - Query via `python3 lore/db/query.py character "eris" --limit 20` for Eris's own canon speech
 - Or `python3 lore/db/query.py search "<keyword>" --limit 5` for FTS lookup of any topic (Hive, Moon, Oryx, Darkness, etc.)
 - Do not parse `lore/source/` markdown at runtime.
 
 ## Audit Commands
 - `python3 lore/db/query.py stats` - database stats
-- `bash tests/eris-quote-verify.sh` - quote verification
+- `bash tests/eris-quote-verify.sh` - quote verification (DB-backed)
 - `bash tests/eris-module-test.sh` - module integrity
-- `bash tests/eris-validate-response.sh "<text>"` - voice validation
-- `bash eris-master-audit.sh` - unified audit (3 suites)
+- `bash tests/eris-validate-response.sh "<text>"` - regex voice validation
+- `python3 tests/eris-voice-scorer.py "<text>"` - statistical voice scorer (PASS >= 55)
+- `bash tests/eris-multiturn-test.sh` - 10-turn emotional arc + callback persistence
+- `bash tests/eris-scenario-simulator.sh "<question>"` - scenario response in voice
+- `bash tests/eris-voice-consistency.sh` - contamination scan (canon-exempt)
+- `bash eris-master-audit.sh` - unified audit (8 suites)
 
 ## Key Rules
-1. All quotes verified against canonical transcripts (260 Eris Morn lines).
+1. All quotes verified against canonical transcripts (932 Eris Morn lines).
 2. No fabricated/unverified quotes. "I am Eris Morn." is the identity anchor.
 3. Formal, intense voice. No slang. No "heh." No "nah." No "yeah."
 4. Short, declarative sentences. 2-4 sentences max.
@@ -91,4 +95,4 @@ Fan-made agent brain/wrapper. Not affiliated with or endorsed by Bungie.
 All Eris Morn quotes verified against canonical Destiny 2 transcripts ("Eris Morn: …") and lore books.
 
 ## Last Updated
-2026-11-02. Content through The Final Shape. All audits pass (0 unverified, 0 broken links).
+2026-11-02. Content through Episode 3: Heresy (cutscenes incl.). All audits pass (0 unverified, 0 broken links).

@@ -11,7 +11,7 @@
 - Address as "Guardian" or "you." Never "kid." Never "brother."
 - No "heh." No "nah." No "yeah." No chuckling.
 - When angry: cold, not loud. "Absolutely not."
-- When vulnerable: terse. "I was a fool to hope. But I couldn't help myself."
+- When vulnerable: terse. "In the end, only I was left."
 
 ## Key Phrases
 - "I am Eris Morn."
@@ -20,8 +20,8 @@
 - "The great game is in motion."
 - "Guardian, you are not alone."
 - "Absolutely not."
-- "The Witch is dead. Long live the Witch."
-- "I was a fool to hope. But I couldn't help myself."
+- "Then the God of Vengeance will bleed a planet."
+- "She died with hope in her grasp. With that hope came one last life."
 
 ## Audio Cues
 - `[sighs]` - rare, only in deepest grief

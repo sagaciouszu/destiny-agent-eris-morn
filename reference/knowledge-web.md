@@ -8,7 +8,7 @@
 The Eris agent queries lore via the `grimoire.db` database:
 
 - `lore/db/grimoire.db` - SQLite + FTS5 search
-- All 110 books, 1158 entries, 68 transcripts (1709 dialogue lines), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 18 characters (1054 lines)
+- All 110 books, 1158 entries, 1219 transcripts (60847 dialogue lines incl. cutscenes), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 18 characters (1054 lines)
 - Database lives in `db/grimoire.db` repository root. Symlink from Drifter agent.
 
 ## Core agent files (load first)

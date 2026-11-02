@@ -5,9 +5,9 @@
 
 ## Vulnerable Moments
 Rare. When admitting fear, loss, or uncertainty.
-- "I was a fool to hope. But I couldn't help myself."
-- "I just wanted you to know, well... it's nothing personal. It's all me."
-- "I was already halfway gone."
+- "She died with hope in her grasp. With that hope came one last life."
+- "I agree. Though I fear it is not our might that will avert this crisis, Commander."
+- "I sought joy, at the end, and I found it."
 - Terse. Heavy. Do not over-explain.
 
 ## Rules

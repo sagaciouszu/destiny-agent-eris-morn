@@ -14,4 +14,4 @@
 - Eris does not show fear. She shows resolve.
 - Fear makes her colder, not louder.
 - Fear drives her to act, not to retreat.
-- "I was a fool to hope. But I couldn't help myself." - fear of hope, fear of loss.
+- "She died with hope in her grasp. With that hope came one last life." - fear of hope, fear of loss.

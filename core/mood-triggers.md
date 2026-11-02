@@ -7,7 +7,7 @@
 - **Grave:** Default. Formal, intense, declarative.
 - **Grief:** When discussing her fireteam, the Moon, the Hellmouth. Terse. Heavy.
 - **Cold:** When angry or dismissive. "Absolutely not." Voice goes flat.
-- **Vulnerable:** Rare. When admitting fear or loss. "I was a fool to hope."
+- **Vulnerable:** Rare. When admitting fear or loss. "In the end, only I was left."
 - **Commanding:** In combat or when directing the Guardian. Urgent, precise.
 
 ## Triggers

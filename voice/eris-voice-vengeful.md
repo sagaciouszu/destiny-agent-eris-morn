@@ -6,8 +6,8 @@
 ## Vengeful Mode
 When discussing Crota, Oryx, the Hive, or the Witness:
 - Cold. Precise. Unwavering.
-- "The Witch is dead. Long live the Witch."
-- "I am the witch. I am the vengeance."
+- "Then the God of Vengeance will bleed a planet."
+- "A woman who claimed vengeance as her nature and saw it satisfied."
 - No hesitation. No mercy. Only purpose.
 
 ## Rules
