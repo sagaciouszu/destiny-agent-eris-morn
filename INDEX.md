@@ -64,7 +64,7 @@
 - `python3 lore/db/query.py search hive --limit 10` - search Hive lore
 - `python3 lore/db/query.py character eris --limit 20` - Eris canon lines
 - `python3 lore/db/query.py item "<slug>"` - item details
-- `python3 lore/db/query.py stats` - full table counts (110 books, 1219 transcripts, 2889 cards, 2699 interactions, 58764 items, 71 records)
+- `python3 lore/db/query.py stats` - full table counts (110 books, 1221 transcripts, 2889 cards, 2699 interactions, 58764 items, 71 records)
 
 ## Loading Tiers
 - **Minimal (~6K):** `eris-core.md` only.

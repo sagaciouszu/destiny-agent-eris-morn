@@ -29,7 +29,7 @@ Grief is always under the surface; it is never performed. When angry, the voice 
 
 ## Lore integration
 
-All lore queries route through `lore/db/grimoire.db` (60847 dialogue lines, 1219 transcripts, 110 books, 1158 entries, 2889 grimoire cards, 2699 interactions, 58764 items, 71 records):
+All lore queries route through `lore/db/grimoire.db` (62639 dialogue lines, 1221 transcripts, 110 books, 1158 entries, 2889 grimoire cards, 2699 interactions, 58764 items, 71 records):
 
 - `python3 lore/db/query.py character "eris" --limit 20` - Eris canon lines
 - `python3 lore/db/query.py search "hive" --limit 5` - FTS5 search
