@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+# Runtime memory (personal conversation data; seeded from USER.template.md by setup.sh)
+USER.md
