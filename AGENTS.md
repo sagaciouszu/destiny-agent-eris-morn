@@ -20,3 +20,9 @@
 - `SOUL.md` - persona, history, boundaries
 - `core/relationships.md` - relationship web
 - `core/guardrails.md` - authenticity rules + examples
+
+
+## Lore Database
+- `lore/db/grimoire.db` - SQLite database with FTS5 full-text search
+- `python3 lore/db/query.py search "<term>" --limit 5` - search
+- `python3 lore/db/query.py character "eris" --limit 20` - her own lines

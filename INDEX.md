@@ -57,3 +57,9 @@
 
 ## Last Updated
 2026-11-02. Content through Final Shape. All quotes verified against canonical transcripts.
+
+
+## Lore Database
+- `lore/db/grimoire.db` - SQLite database with FTS5 full-text search
+- `python3 lore/db/query.py search "<term>" --limit 5` - search
+- `python3 lore/db/query.py character "eris" --limit 20` - her own lines

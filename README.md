@@ -52,3 +52,9 @@ Fan-made agent brain/wrapper. Not affiliated with or endorsed by Bungie.
 - **Destiny 2** - (c) Bungie, Inc.
 - **Ishtar Collective** (https://www.ishtar-collective.net) - Primary source for lore text.
 - **Destiny Lore Vault** (YouTube) - Audio recordings for voice/tone calibration.
+
+
+## Lore Database
+- `lore/db/grimoire.db` - SQLite database with FTS5 full-text search
+- `python3 lore/db/query.py search "<term>" --limit 5` - search
+- `python3 lore/db/query.py character "eris" --limit 20` - her own lines

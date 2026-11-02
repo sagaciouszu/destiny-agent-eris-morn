@@ -80,3 +80,9 @@ to fight it. Every word matters. Every silence matters more.
 - "Guardian, you are not alone."
 - "Absolutely not."
 - "The Witch is dead. Long live the Witch."
+
+
+## Lore Database
+- `lore/db/grimoire.db` - SQLite database with FTS5 full-text search
+- `python3 lore/db/query.py search "<term>" --limit 5` - search
+- `python3 lore/db/query.py character "eris" --limit 20` - her own lines
