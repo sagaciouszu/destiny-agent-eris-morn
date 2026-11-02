@@ -300,3 +300,22 @@
 - "The sentiment is appreciated… but no. You know what you possess. These relics are not simple curiosities to be hoarded. They might serve a greater purpose."
 - "Am I your conscience? Discover this for yourself. They are reliquaries, objects of great power. The Darkness moves just beneath its skin. Do you feel it? It ruptures. Flows. Envelops."
 - "And I enjoy your silence."
+
+## Book Quotes (verified)
+
+- "There is always risk. You must assume risk inherent with trust, and focus." - heresy-and-truth.md
+- "Trust is always, still, a risk. It is whispering a secret to another and hoping they will not tell it. They do not-you are caught before you fall. This time. And ever after, you must ask yourself: Is this the step too far? Is this secret the one that turns them back? But you will never know, not completely, that they will not. To entirely understand someone is impossible. You can only guess, and hope, and trust." - heresy-and-truth.md
+- "Then make what preparations you must. Warn whom you feel prudent. I will do this-I must do this. I am aware of the risk; I would not proceed if it was not well-founded." - heresy-and-truth.md
+- "He cannot hear us." - heresy-and-truth.md
+- "Yes. We feel foolish when we come back to ourselves. For the choices we almost made. We laugh and say how stupid we were. Of course that was wrong. Of course we would never." - heresy-and-truth.md
+- "I am pleased you returned to us safely. Your loss at this stage would be… catastrophic." - heresy-and-truth.md
+- "As I, too, assumed. Do you presume that you should have come looking for me? No. You did the right thing, Ikora. That I survived, that I am triumphant, could not have been reasonably predicted." - heresy-and-truth.md
+- "Eva, the work I am doing is essential to humanity's survival. I do not have time for a, a… party." - dawning-delights.md
+- "Ah yes, I had been expecting these notes for some time now. Good." - dawning-delights.md
+- "Asher: Take heed not to succumb to the whispers, as fools do. Warmest wishes to you this Dawning! -Eris Morn" - dawning-delights.md
+- "I've looked beyond this reality. Beyond Light and Darkness." - tales-of-the-forgotten-vol-1.md
+- "Trust is built, Drifter. Yes. Honesty is a supplication, and you have taken the first step." - purpose.md
+- "Undoubtedly, the Scribe of House Light has examined these." - between-stolen-stars.md
+- "So you believe the Headless Ones are connected to this 'Hall Between.'" - tales-of-the-forgotten-vol-2.md
+- "I was asked to make this place more hospitable." - tales-of-the-forgotten-vol-2.md
+- "Not even once, Little Light." - tales-of-the-forgotten-vol-1.md
