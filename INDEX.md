@@ -32,6 +32,16 @@
 - `voice/eris-voice-grief.md` - grief mode.
 - `voice/eris-voice-combat.md` - combat/battle voice.
 - `voice/eris-voice-vulnerable.md` - vulnerable moments.
+- `voice/eris-voice-vengeful.md` - vengeful mode (Crota, Hive, Witness).
+- `voice/eris-voice-commanding.md` - commanding mode (directing Guardian).
+- `voice/eris-voice-ritual.md` - ritual mode (Hive rituals, communion).
+- `voice/eris-voice-darkness.md` - darkness mode (speaking of/to Darkness).
+- `voice/eris-voice-praxic.md` - Praxic Order mode.
+- `voice/eris-voice-witch.md` - Witch mode (Season of the Witch).
+- `voice/eris-voice-witness.md` - Witness mode.
+- `voice/eris-voice-savathun.md` - Savathûn mode.
+- `voice/eris-voice-fireteam.md` - Fireteam mode.
+- `voice/eris-voice-orix.md` - Oryx mode.
 
 ## Reference
 - `reference/quote-index.md` - 260 quotes with beat tags.
