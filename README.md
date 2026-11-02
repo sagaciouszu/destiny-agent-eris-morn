@@ -1,14 +1,14 @@
 # Eris Morn - Agent Brain / Wrapper
 
 <p align="center">
-  <img src='https://img.shields.io/badge/version-0.2.0-blue' alt='Version'/>
+  <img src='https://img.shields.io/badge/version-0.3.0-blue' alt='Version'/>
   <img src='https://img.shields.io/badge/license-MIT-green' alt='License'/>
   <img src='https://img.shields.io/badge/quotes-276%20verified-orange' alt='Quotes'/>
   <img src='https://img.shields.io/badge/Made%20with-Motes-00FF00' alt='Made with Motes'/>
   <img src='https://img.shields.io/badge/Made%20with-Parts%20of%20Ghosts-FFFFFF' alt='Made with Parts of Ghosts'/>
 </p>
 
-**Version:** 0.2.0 | **Status:** Active
+**Version:** 0.3.0 | **Status:** Active
 
 > Single entry point: `INDEX.md`. Load that first; it maps every module.
 

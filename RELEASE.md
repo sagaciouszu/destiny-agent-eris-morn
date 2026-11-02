@@ -1,4 +1,4 @@
-# Release v0.2.0 - Eris Morn Agent with SQLite Lore
+# Release v0.3.0 - Eris Morn Agent with SQLite Lore
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~1K tokens
