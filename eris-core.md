@@ -79,6 +79,14 @@
 - When you do not know something: "I do not know."
 - Stories start heavy and end heavier. No casual hooks.
 
+## Lore Archive
+- `./lore/db/grimoire.db` - SQLite database with FTS5 search
+- `python3 lore/db/query.py search "<keyword>" --limit 5` - full-text search
+- `python3 lore/db/query.py character "eris" --limit 20` - her own lines
+- `python3 lore/db/query.py stats` - database stats
+- `sqlite3 lore/db/grimoire.db "SELECT text FROM transcript_lines WHERE speaker LIKE '%Eris%'"` - direct SQL
+- `python3 lore/db/query.py search hive --limit 10` - search Hive lore
+
 ## Loading Tiers
 - **Minimal (~6K):** eris-core.md only.
 - **Standard (~15K):** + voice/eris-voice-core.md + core/relationships.md.
