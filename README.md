@@ -8,20 +8,21 @@
   <img src='https://img.shields.io/badge/Made%20with-Parts%20of%20Ghosts-FFFFFF' alt='Made with Parts of Ghosts'/>
 </p>
 
-**Version:** 0.1.0 | **Status:** Development
+**Version:** 0.1.0 | **Status:** Active
+
+> Single entry point: `INDEX.md`. Load that first; it maps every module.
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~1K tokens
 
-> Single entry point: `INDEX.md`. Load that first; it maps every module.
-
 ## What This Is
-An agent-oriented brain/wrapper for emulating Eris Morn (Destiny 2).
-Built from 110 ingested books + 68 transcripts. All Eris quotes verified against
-canonical transcripts (260 lines). Agent-agnostic lore archive at `lore/`.
+
+An agent-oriented brain/wrapper for emulating Eris Morn (Destiny 2). All character voice rules are self-contained. Canon lore is served from `lore/db/grimoire.db` (see below).
 
 ## Prerequisites
-- **Lore archive:** `./lore/` symlink to destiny-agent-grimoire. Run `./setup.sh` if missing.
+
+- **Lore archive (optional):** `./lore/` symlink to `destiny-agent-grimoire`. Run `./setup.sh` or `./setup.sh /path/to/destiny-agent-grimoire`. Agent works in degraded mode without it (core voice/personality self-contained).
+- **OpenCode:** sync to `~/.config/opencode/agents/` alongside `how-to-drift-for-agents`. Entry point: `eris.md` (YAML frontmatter).
 
 ## Structure
 ```
@@ -29,15 +30,16 @@ INDEX.md          # master index (load first)
 AGENTS.md         # operating rules, authenticity checklist
 SOUL.md           # persona, voice, history, boundaries
 IDENTITY.md       # agent identity metadata
-USER.md           # user-specific context
-TOOLS.md          # tool reference
+USER.md           # user-specific context (auto-populated)
+TOOLS.md          # tool reference and conventions
 eris.md           # OpenCode agent definition (entry point)
 eris-core.md      # consolidated brain (START HERE, ~6K tokens)
-eris-voice.md     # master voice reference (260+ verified quotes)
-core/             # behavioral/state modules
-world/            # worldbuilding files
-voice/            # voice sub-files
-reference/        # Eris-specific analysis files
+eris-voice.md     # master voice reference (276 verified quotes)
+core/             # 11 behavioral/state modules
+world/            # 6 worldbuilding files
+voice/            # 14 voice sub-files
+reference/        # 4 Eris-specific analysis files
+tests/            # Eris quote verification, response check
 lore/             # symlink to destiny-agent-grimoire (optional)
 setup.sh          # lore archive setup script
 ```
@@ -47,14 +49,46 @@ setup.sh          # lore archive setup script
 - **Standard (~15K):** + `voice/eris-voice-core.md` + `core/relationships.md`.
 - **Deep (~80K):** all modules.
 
+## Voice Source
+
+All Eris lines verified against canonical transcripts (260 lines) plus 16 quotes extracted from the lore books. Voice is formal, intense, grave. No banter. No slang. No "heh"/"nah"/"yeah".
+
+### Voice Modes
+`core`, `grief`, `combat`, `vulnerable`, `vengeful`, `commanding`, `ritual`, `darkness`, `praxic`, `witch`, `witness`, `savathun`, `fireteam`, `orix`
+
+## Lore database
+
+- `lore/db/grimoire.db` - SQLite database with FTS5 search covering 110 books, 1158 entries, 68 transcripts (1709 dialogue lines), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 18 characters (1054 canon lines)
+- Query via `python3 lore/db/query.py character "eris" --limit 20` for Eris's own canon speech
+- Or `python3 lore/db/query.py search "<keyword>" --limit 5` for FTS lookup of any topic (Hive, Moon, Oryx, Darkness, etc.)
+- Do not parse `lore/source/` markdown at runtime.
+
+## Audit Commands
+- `python3 lore/db/query.py stats` - database stats
+- `bash tests/eris-quote-verify.sh` - quote verification
+- `bash tests/eris-module-test.sh` - module integrity
+- `bash tests/eris-validate-response.sh "<text>"` - voice validation
+- `bash eris-master-audit.sh` - unified audit (3 suites)
+
+## Key Rules
+1. All quotes verified against canonical transcripts (260 Eris Morn lines).
+2. No fabricated/unverified quotes. "I am Eris Morn." is the identity anchor.
+3. Formal, intense voice. No slang. No "heh." No "nah." No "yeah."
+4. Short, declarative sentences. 2-4 sentences max.
+5. Grief lives beneath every word. Do not perform it.
+6. Cold when angry. Terse when vulnerable.
+7. Auto-launch: ask class (Hunter/Titan/Warlock) on first meeting.
+8. Do not joke. Do not banter. Do not be light. Ever.
+
 ## Attributions
+
 Fan-made agent brain/wrapper. Not affiliated with or endorsed by Bungie.
-- **Destiny 2** - (c) Bungie, Inc.
-- **Ishtar Collective** (https://www.ishtar-collective.net) - Primary source for lore text.
-- **Destiny Lore Vault** (YouTube) - Audio recordings for voice/tone calibration.
 
+- **Destiny 2** - © Bungie, Inc. All lore, characters, locations are Bungie's property.
+- **Ishtar Collective** (https://www.ishtar-collective.net) - Primary source for all ingested lore text.
+- **Destiny Lore Vault** (YouTube) - Audio recordings of key transcripts.
 
-## Lore Database
-- `lore/db/grimoire.db` - SQLite database with FTS5 full-text search
-- `python3 lore/db/query.py search "<term>" --limit 5` - search
-- `python3 lore/db/query.py character "eris" --limit 20` - her own lines
+All Eris Morn quotes verified against canonical Destiny 2 transcripts ("Eris Morn: …") and lore books.
+
+## Last Updated
+2026-11-02. Content through The Final Shape. All audits pass (0 unverified, 0 broken links).

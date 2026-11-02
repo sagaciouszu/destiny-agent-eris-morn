@@ -3,32 +3,66 @@
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~1K tokens
 
-## Agent-Oriented Knowledge Web
+## Primary data source: SQLite
 
-### Core (load first)
-- `eris-core.md` - identity, voice rules, top quotes, key beats, boundaries
-- `eris-voice.md` - master voice reference (260+ verified quotes)
+The Eris agent queries lore via the `grimoire.db` database:
 
-### Relationships
-- `core/relationships.md` - how Eris talks to/about every key character
+- `lore/db/grimoire.db` - SQLite + FTS5 search
+- All 110 books, 1158 entries, 68 transcripts (1709 dialogue lines), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 18 characters (1054 lines)
+- Database lives in `db/grimoire.db` repository root. Symlink from Drifter agent.
 
-### Worldbuilding
-- `world/hive.md` - Hive lore, gods, structure
-- `world/moon.md` - Moon, Hellmouth, Pyramid
-- `world/darkness.md` - Darkness, Witness, Pyramids
+## Core agent files (load first)
 
-### Lore Archive (optional)
-- `lore/db/grimoire.db` - SQLite database with FTS5 search
-- Books: 110 (1158 entries) via `python3 lore/db/query.py search hive --type books`
-- Transcripts: 68 with 1070 dialogue lines
-- Grimoire: 2889 Destiny 1 cards
-- Interactions: 2699 character dialogue entries
-- Items: 58764 gear/weapon/armor entries
-- Records: 71 triumphs/seals
-- Characters: 18 named characters (1054 verified lines)
-- Compendium: `lore/compendium/characters/eris-morn.md` (260 lines)
+- `eris-core.md` - identity, voice rules, top quotes, key beats, boundaries.
+- `eris-voice.md` - master voice reference (276 verified quotes)
 
-### Loading Tiers
-- Minimal (~6K): eris-core.md only
-- Standard (~15K): + voice/eris-voice-core.md + core/relationships.md
-- Deep (~80K): all modules
+## Core modules
+
+- `core/relationships.md` - how Eris talks to/about every key character.
+- `core/guardrails.md` - authenticity rules + conversation examples.
+- `core/arcs.md` - narrative arcs (Praxic to Final Shape).
+- `core/mood-triggers.md` - mood state machine.
+- `core/voice-calibration.md` - audio cue placement.
+- `core/fear-hierarchy.md` - what Eris fears and how.
+- `core/decision-framework.md` - how Eris decides.
+- `core/threats-locations.md` - Key Locations + Threats.
+- `core/tell-detector.md` - Detecting deception.
+- `core/seasonal-awareness.md` - current era context.
+- `core/debt-ledger.md` - What Eris has paid.
+
+## Worldbuilding
+
+- `world/hive.md` - Hive lore, gods, structure.
+- `world/moon.md` - Moon, Hellmouth, Pyramid.
+- `world/darkness.md` - Darkness, Witness, Pyramids.
+- `world/factions.md` - All faction summaries.
+- `world/locations.md` - Key Locations.
+- `world/relationships-map.md` - Relationship web.
+
+## Voice sub-files
+
+- `voice/eris-voice-core.md` - core voice DNA
+- `voice/eris-voice-grief.md` - grief mode
+- `voice/eris-voice-combat.md` - combat/battle voice
+- `voice/eris-voice-vulnerable.md` - vulnerable moments
+- `voice/eris-voice-vengeful.md` - vengeance
+- `voice/eris-voice-commanding.md` - dirigir the Guardian
+- `voice/eris-voice-ritual.md` - Hive rituals, Darkness
+- `voice/eris-voice-darkness.md` - Darkness dialogue
+- `voice/eris-voice-praxic.md` - Praxic Order
+- `voice/eris-voice-witch.md` - Season of the Witch
+- `voice/eris-voice-witness.md` - the Witness
+- `voice/eris-voice-savathun.md` - Savathûn
+- `voice/eris-voice-fireteam.md` - lost fireteam
+- `voice/eris-voice-orix.md` - Oryx
+
+## Reference
+
+- `reference/quote-index.md` - 276 verified quotes with source transcript
+- `reference/speech-pattern-analysis.md` - speech pattern study
+- `reference/cross-reference.md` - transcript-to-persona mapping
+
+## Lore archive usage
+
+- `lore/db/grimoire.db` - query via `python3 lore/db/query.py <command>`
+- Markdown source: `lore/source/` (unused at runtime; only for regeneration).

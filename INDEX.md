@@ -44,11 +44,17 @@
 - `voice/eris-voice-orix.md` - Oryx mode.
 
 ## Reference
-- `reference/quote-index.md` - 260 quotes with beat tags.
+- `reference/quote-index.md` - 276 verified Eris Morn quotes.
 - `reference/knowledge-web.md` - agent-oriented knowledge web.
+- `reference/speech-pattern-analysis.md` - statistical speech analysis.
+- `reference/cross-reference.md` - transcript-to-persona mapping.
 
-## Lore Archive
-- `lore/` - symlink to destiny-agent-grimoire (optional, requires setup).
+## Lore Database
+- `lore/db/grimoire.db` - SQLite database with FTS5 search
+- `python3 lore/db/query.py search hive --limit 10` - search Hive lore
+- `python3 lore/db/query.py character eris --limit 20` - Eris canon lines
+- `python3 lore/db/query.py item "<slug>"` - item details
+- `python3 lore/db/query.py stats` - full table counts (110 books, 68 transcripts, 2889 cards, 2699 interactions, 58764 items, 71 records)
 
 ## Loading Tiers
 - **Minimal (~6K):** `eris-core.md` only.

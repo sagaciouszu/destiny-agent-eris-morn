@@ -16,13 +16,21 @@
 
 ## Companion Files
 - `eris-core.md` - consolidated brain (start here)
-- `eris-voice.md` - master voice reference (260+ quotes)
-- `SOUL.md` - persona, history, boundaries
-- `core/relationships.md` - relationship web
-- `core/guardrails.md` - authenticity rules + examples
-
+- `eris-voice.md` - master voice reference (276 verified quotes)
+- `SOUL.md`         - persona, history, boundaries
+- `core/relationships.md`      - relationship web
+- `core/guardrails.md`         - authenticity rules + examples
+- `reference/knowledge-web.md` - lore-database usage guide
 
 ## Lore Database
-- `lore/db/grimoire.db` - SQLite database with FTS5 full-text search
-- `python3 lore/db/query.py search "<term>" --limit 5` - search
-- `python3 lore/db/query.py character "eris" --limit 20` - her own lines
+The canonical Destiny lore backing this agent is `lore/db/grimoire.db` (SQLite, FTS5 search).
+Browse via:
+
+```bash
+python3 lore/db/query.py search hive --limit 10
+python3 lore/db/query.py character eris --limit 20
+python3 lore/db/query.py item 0a0x-nightmask
+sqlite3 lore/db/grimoire.db "SELECT speaker, line FROM transcript_lines WHERE speaker LIKE '%Eris%' LIMIT 10"
+```
+
+Do not read `lore/source/*.md` at runtime. The database is the interface.
