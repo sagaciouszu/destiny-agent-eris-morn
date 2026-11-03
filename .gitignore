@@ -3,3 +3,6 @@ __pycache__/
 
 # Runtime memory (personal conversation data; seeded from USER.template.md by setup.sh)
 USER.md
+
+# Canon archive (symlink or clone created by setup.sh)
+lore
