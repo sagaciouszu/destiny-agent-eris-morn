@@ -13,7 +13,7 @@
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
 
-**Version:** 0.7.0 | **Last push:** 2026-11-03 | **Status:** Active
+**Version:** 0.8.0 | **Last push:** 2026-11-03 | **Status:** Active
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~1.6K tokens
@@ -92,7 +92,7 @@ YAML frontmatter, `mode: primary`). For OpenCode, sync this directory to
 | `sqlite3` | optional raw SQL | the query CLI uses Python's built-in driver |
 | `curl` | optional prebuilt database | falls back to a local build |
 | MCP SDK (optional) | typed tools for clients without a shell | Python 3.10+; one-time install |
-| ~500 MB disk | checkout plus built database | database is ~164 MB |
+| ~500 MB disk | checkout plus built database | database is ~170 MB |
 
 No API keys, accounts or network access are required at runtime.
 
@@ -161,8 +161,8 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 | Module completeness | `bash lore/tests/eris-module-test.sh` | 16 checks |
 | Quote verification | `bash lore/tests/eris-quote-verify.sh` | 0 unverified |
 | 10-turn arc | `bash lore/tests/eris-multiturn-test.sh` | 10/10 |
-| Database integrity | `bash lore/tests/test-db.sh` | 37 checks |
-| Query interface | `bash lore/tests/query-interface-test.sh` | 27 checks |
+| Database integrity | `bash lore/tests/test-db.sh` | 38 checks |
+| Query interface | `bash lore/tests/query-interface-test.sh` | 29 checks |
 | MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 6/6 |
 | File conformance | `python3 lore/tests/conformance.py` | PASS |
 
