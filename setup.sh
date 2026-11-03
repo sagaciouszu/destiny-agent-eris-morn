@@ -15,6 +15,12 @@ if [ -f "$WORKSPACE/USER.template.md" ] && [ ! -f "$WORKSPACE/USER.md" ]; then
     echo "Seeded USER.md"
 fi
 
+# A committed/stale symlink can arrive dangling on another machine
+if [ -L "$WORKSPACE/lore" ] && [ ! -e "$WORKSPACE/lore" ]; then
+    echo "Removing dangling lore symlink -> $(readlink "$WORKSPACE/lore")"
+    rm -f "$WORKSPACE/lore"
+fi
+
 if [ -L "$WORKSPACE/lore" ]; then
     echo "lore symlink already exists -> $(readlink "$WORKSPACE/lore")"
 elif [ -d "$WORKSPACE/lore" ]; then
