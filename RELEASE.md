@@ -1,4 +1,4 @@
-# Release v0.4.0 - Eris Morn Agent: Platform-Agnostic Contract + Interface v2
+# Release v0.4.0 - Platform-Agnostic Contract + Interface v2
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~0.4K tokens
@@ -14,11 +14,17 @@
 - **Agent-safe bootstrap** - prebuilt download or local build, `BOOTSTRAP=1|2`, never blocks
 - **Voice integrity** - cross-character attribution maintained (0 issues); 8-suite audit
 - **Measured tiers** - minimal ~1.4K, standard ~2.1K, deep ~27K (was overstated 4-6x)
+- **Clone-mode parity** - module test accepts `lore/` as a symlink or a clone and never scans inside it
 
 ## Verification
 
-- `eris-master-audit.sh`: 8/8
-- quotes: 0 unverified; attribution: 0 cross-character quotes
-- fresh-clone onboarding: seeded `USER.md` + built database + 8/8
+| Suite | Result |
+|-------|--------|
+| eris-master-audit | 8/8 |
+| grimoire master-audit | 11/11 |
+| drifter-master-audit | 17/17 |
+| quote verification | 0 unverified |
+| attribution | 0 cross-character quotes |
+| fresh-clone onboarding | seeded `USER.md` + built database + 8/8 |
 
 Fan-made. Not affiliated with or endorsed by Bungie.

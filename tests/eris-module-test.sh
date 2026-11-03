@@ -17,7 +17,7 @@ import os,sys
 ws=sys.argv[1]
 n=0
 for root,_,fs in os.walk(ws):
-    if '/.git' in root: continue
+    if '/.git' in root or '/lore' in root: continue
     for f in fs:
         if not f.endswith('.md'): continue
         p=os.path.join(root,f)
@@ -29,13 +29,13 @@ PY
 )
 check "[ $MISSING -eq 0 ]" "All md files have headers (missing: $MISSING)"
 # em-dashes
-EM=$(grep -rl '—\|–' "$WORKSPACE" --include='*.md' 2>/dev/null | grep -v .git | wc -l)
+EM=$(grep -rl '—\|–' "$WORKSPACE" --include='*.md' --exclude-dir=lore --exclude-dir=.git 2>/dev/null | wc -l)
 check "[ $EM -eq 0 ]" "No em/en-dashes (found: $EM)"
 # personal paths
-PER=$(grep -rl '/home/sredshaw' "$WORKSPACE" --include='*.md' 2>/dev/null | grep -v .git | wc -l)
+PER=$(grep -rniE '/home/[a-z0-9._-]+/' "$WORKSPACE" --include='*.md' --include='*.sh' --exclude-dir=lore --exclude-dir=.git 2>/dev/null | wc -l)
 check "[ $PER -eq 0 ]" "No personal paths (found: $PER)"
-# lore symlink
-check "[ -L $WORKSPACE/lore ]" "lore symlink exists"
+# lore present as symlink or clone
+check "[ -L $WORKSPACE/lore ] || [ -d $WORKSPACE/lore ]" "lore present (symlink or clone)"
 echo ""
 echo "Passed: $PASS | Failed: $FAIL"
 [ "$FAIL" -eq 0 ]

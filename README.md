@@ -8,6 +8,10 @@
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
 
+<p align="center">
+  <img src='header.png' alt='Eris Morn - Agent Brain / Wrapper' width='100%'/>
+</p>
+
 **Version:** 0.4.0 | **Status:** Active
 
 > Single entry point: `INDEX.md`. Load that first; it maps every module.
@@ -41,7 +45,7 @@ world/            # 6 worldbuilding files
 voice/            # 14 voice sub-files
 reference/        # 4 Eris-specific analysis files
 tests/            # Eris quote verification, response check
-lore/             # symlink to destiny-agent-grimoire (optional)
+lore/             # symlink to or clone of destiny-agent-grimoire (optional)
 setup.sh          # lore archive setup script
 ```
 

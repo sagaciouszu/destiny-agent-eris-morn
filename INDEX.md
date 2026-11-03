@@ -18,7 +18,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 
 | From | To | Mechanism |
 |------|----|-----------|
-| agent | canon lore | `lore/db/grimoire.db` (`lore/` symlink to destiny-agent-grimoire) |
+| agent | canon lore | `lore/db/grimoire.db` (`lore/` symlink to or clone of destiny-agent-grimoire) |
 | agent | canon interface | `python3 lore/db/query.py <search\|character\|item\|verify\|list\|stats>` |
 | `setup.sh` | canon repo | symlink/clone; seeds `USER.md`; bootstraps DB if missing |
 | runtime memory | local only | `USER.md` (gitignored, seeded from `USER.template.md`) |
