@@ -25,9 +25,12 @@ for r in conn.execute("SELECT line FROM transcript_lines WHERE speaker LIKE '%Er
         cn = norm(r[0])
         if len(cn) >= 15:
             canon_norm.add(cn)
-        for sentence in re.split(r'(?<=[.!?])\s+', cn):
-            if len(sentence) >= 15:
-                canon_norm.add(sentence)
+        # Split the RAW line first: norm() strips periods, so splitting cn
+        # never yields fragments (parity with drifter-quote-verify).
+        for sentence in re.split(r'(?<=[.!?])\s+', r[0]):
+            cs = norm(sentence)
+            if len(cs) >= 15:
+                canon_norm.add(cs)
 
 tables = [
     ('book_entries', 'norm_text'),

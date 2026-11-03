@@ -1,11 +1,12 @@
 # Eris Morn - Agent Brain / Wrapper
 
 <p align="center">
-  <img src='https://img.shields.io/badge/version-0.3.0-blue' alt='Version'/>
+  <img src='https://img.shields.io/github/v/tag/sagaciouszu/eris-morn?label=version&color=blue' alt='Version'/>
   <img src='https://img.shields.io/badge/license-MIT-green' alt='License'/>
-  <img src='https://img.shields.io/badge/quotes-276%20verified-orange' alt='Quotes'/>
-  <img src='https://img.shields.io/badge/Made%20with-Motes-00FF00' alt='Made with Motes'/>
-  <img src='https://img.shields.io/badge/Made%20with-Parts%20of%20Ghosts-FFFFFF' alt='Made with Parts of Ghosts'/>
+  <img src='https://img.shields.io/badge/quotes-935%20verified-orange' alt='Quotes'/>
+  <img src='https://img.shields.io/badge/tests-8%2F8%20passing-brightgreen' alt='Tests'/>
+  <img src='https://img.shields.io/badge/Made%20with-Ahamkara%20Bones-9370DB' alt='Made with Ahamkara Bones'/>
+  <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
 
 **Version:** 0.3.0 | **Status:** Active
