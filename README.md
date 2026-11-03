@@ -156,7 +156,7 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 | Module completeness | `bash lore/tests/eris-module-test.sh` | 16 checks |
 | Quote verification | `bash lore/tests/eris-quote-verify.sh` | 0 unverified |
 | 10-turn arc | `bash lore/tests/eris-multiturn-test.sh` | 10/10 |
-| Database integrity | `bash lore/tests/test-db.sh` | 35 checks |
+| Database integrity | `bash lore/tests/test-db.sh` | 36 checks |
 | Query interface | `bash lore/tests/query-interface-test.sh` | 23 checks |
 | MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 6/6 |
 | File conformance | `python3 lore/tests/conformance.py` | PASS |
