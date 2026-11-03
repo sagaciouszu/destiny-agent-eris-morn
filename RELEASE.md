@@ -1,7 +1,7 @@
 # v0.4.1 - Documentation and verification overhaul
 
 > **Depends On:** INDEX.md
-> **Token Estimate:** ~0.3K tokens
+> **Token Estimate:** ~0.2K tokens
 
 **2026-11-02**
 
