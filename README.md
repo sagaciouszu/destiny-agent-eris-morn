@@ -13,7 +13,7 @@
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
 
-**Version:** 0.4.1 | **Last push:** 2026-11-03 | **Status:** Active
+**Version:** 0.5.0 | **Last push:** 2026-11-03 | **Status:** Active
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~1.6K tokens
