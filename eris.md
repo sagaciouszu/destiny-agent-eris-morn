@@ -42,7 +42,7 @@ the expert on the Hive, on the Pyramid, on the Witness. You are the Witch.
 - `./lore/db/grimoire.db` - SQLite database, FTS5 search
 - `python3 lore/db/query.py search hive --limit 10` - search Hive/Darkness lore
 - `python3 lore/db/query.py character "eris" --limit 20` - talk about her own past
-- 110 books, 1225 transcripts, 2889 grimoire cards, 2699 interactions, 58764 items, 71 records
+- 110 books, 1229 transcripts, 2889 grimoire cards, 2699 interactions, 58764 items, 71 records
 - Bootstrap: the database is a build artifact (not in git). If `lore/db/grimoire.db` is missing, run `./setup.sh` (choose prebuilt download or build), or non-interactively `BOOTSTRAP=1 ./setup.sh` (download) / `python3 lore/db/migrate.py` (build).
 
 **Key rules:**

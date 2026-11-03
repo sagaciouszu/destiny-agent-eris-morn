@@ -58,7 +58,7 @@ All 276 voice quotes verified against 940 canonical Eris transcript lines in the
 
 ## Lore database
 
-- `lore/db/grimoire.db` - SQLite database with FTS5 search covering 110 books, 1158 entries, 1225 transcripts (69213 dialogue lines incl. cutscenes), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 18 characters (1189 canon lines)
+- `lore/db/grimoire.db` - SQLite database with FTS5 search covering 110 books, 1158 entries, 1229 transcripts (69499 dialogue lines incl. cutscenes), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 18 characters (1189 canon lines)
 - Query via `python3 lore/db/query.py character "eris" --limit 20` for Eris's own canon speech
 - Or `python3 lore/db/query.py search "<keyword>" --limit 5` for FTS lookup of any topic (Hive, Moon, Oryx, Darkness, etc.)
 - Do not parse `lore/source/` markdown at runtime.
