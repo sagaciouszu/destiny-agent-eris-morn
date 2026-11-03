@@ -24,8 +24,6 @@ def load_corpus():
     candidates = [
         os.environ.get("GRIMOIRE_DB", ""),
         os.path.join(here, "..", "lore", "db", "grimoire.db"),
-        os.path.join(here, "..", "..", "destiny-agent-grimoire", "db", "grimoire.db"),
-        os.path.join(here, "..", "lore", "db", "grimoire.db"),
     ]
     for db in candidates:
         if db and os.path.exists(db):
