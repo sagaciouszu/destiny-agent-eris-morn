@@ -13,7 +13,7 @@
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
 
-**Version:** 0.6.0 | **Last push:** 2026-11-03 | **Status:** Active
+**Version:** 0.7.0 | **Last push:** 2026-11-03 | **Status:** Active
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~1.6K tokens
@@ -162,7 +162,7 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 | Quote verification | `bash lore/tests/eris-quote-verify.sh` | 0 unverified |
 | 10-turn arc | `bash lore/tests/eris-multiturn-test.sh` | 10/10 |
 | Database integrity | `bash lore/tests/test-db.sh` | 37 checks |
-| Query interface | `bash lore/tests/query-interface-test.sh` | 23 checks |
+| Query interface | `bash lore/tests/query-interface-test.sh` | 27 checks |
 | MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 6/6 |
 | File conformance | `python3 lore/tests/conformance.py` | PASS |
 
