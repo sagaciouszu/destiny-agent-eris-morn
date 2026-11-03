@@ -21,7 +21,7 @@
 
 ### Quote Verification
 - All quotes verified against canonical transcripts (940 Eris Morn lines) + lore books.
-- Run: `bash tests/eris-quote-verify.sh`
+- Run: `bash lore/tests/eris-quote-verify.sh`
 
 ### Conventions
 - No em-dashes or en-dashes.

@@ -14,17 +14,18 @@
 - **Agent-safe bootstrap** - prebuilt download or local build, `BOOTSTRAP=1|2`, never blocks
 - **Voice integrity** - cross-character attribution maintained (0 issues); 8-suite audit
 - **Measured tiers** - minimal ~1.4K, standard ~2.1K, deep ~27K (was overstated 4-6x)
-- **Clone-mode parity** - module test accepts `lore/` as a symlink or a clone and never scans inside it
+- **Clone-mode parity**
+- **Centralized tests** - Eris suites moved into the archive next to the Drifter's; one shared `tests/agent-audit.sh` runner, identical setup flow and `.gitignore` across both agents - module test accepts `lore/` as a symlink or a clone and never scans inside it
 
 ## Verification
 
 | Suite | Result |
 |-------|--------|
-| eris-master-audit | 8/8 |
-| grimoire master-audit | 11/11 |
-| drifter-master-audit | 17/17 |
+| `lore/eris-master-audit.sh` | 13/13 |
+| `grimoire-master-audit.sh` | 11/11 |
+| `drifter-master-audit.sh` | 18/18 |
 | quote verification | 0 unverified |
 | attribution | 0 cross-character quotes |
-| fresh-clone onboarding | seeded `USER.md` + built database + 8/8 |
+| fresh-clone onboarding | seeded `USER.md` + built database + 13/13 |
 
 Fan-made. Not affiliated with or endorsed by Bungie.

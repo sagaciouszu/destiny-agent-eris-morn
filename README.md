@@ -3,7 +3,7 @@
 <p align="center">
   <img src='https://img.shields.io/github/v/tag/sagaciouszu/eris-morn?label=version&color=blue' alt='Version'/>
   <img src='https://img.shields.io/badge/license-MIT-green' alt='License'/>
-  <img src='https://img.shields.io/badge/tests-8%2F8%20passing-brightgreen' alt='Tests'/>
+  <img src='https://img.shields.io/badge/tests-13%2F13%20passing-brightgreen' alt='Tests'/>
   <img src='https://img.shields.io/badge/Made%20with-Ahamkara%20Bones-9370DB' alt='Made with Ahamkara Bones'/>
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
@@ -44,7 +44,6 @@ core/             # 11 behavioral/state modules
 world/            # 6 worldbuilding files
 voice/            # 14 voice sub-files
 reference/        # 4 Eris-specific analysis files
-tests/            # Eris quote verification, response check
 lore/             # symlink to or clone of destiny-agent-grimoire (optional)
 setup.sh          # lore archive setup script
 ```
@@ -71,14 +70,14 @@ All 276 voice quotes verified against 940 canonical Eris transcript lines in the
 
 ## Audit Commands
 - `python3 lore/db/query.py stats` - database stats
-- `bash tests/eris-quote-verify.sh` - quote verification (DB-backed)
-- `bash tests/eris-module-test.sh` - module integrity
-- `bash tests/eris-validate-response.sh "<text>"` - regex voice validation
-- `python3 tests/eris-voice-scorer.py "<text>"` - statistical voice scorer (PASS >= 55)
-- `bash tests/eris-multiturn-test.sh` - 10-turn emotional arc + callback persistence
-- `bash tests/eris-scenario-simulator.sh "<question>"` - scenario response in voice
-- `bash tests/eris-voice-consistency.sh` - contamination scan (canon-exempt)
-- `bash eris-master-audit.sh` - unified audit (8 suites)
+- `bash lore/tests/eris-quote-verify.sh` - quote verification (DB-backed)
+- `bash lore/tests/eris-module-test.sh` - module integrity
+- `bash lore/tests/eris-validate-response.sh "<text>"` - regex voice validation
+- `python3 lore/tests/eris-voice-scorer.py "<text>"` - statistical voice scorer (PASS >= 55)
+- `bash lore/tests/eris-multiturn-test.sh` - 10-turn emotional arc + callback persistence
+- `bash lore/tests/eris-scenario-simulator.sh "<question>"` - scenario response in voice
+- `bash lore/tests/eris-voice-consistency.sh` - contamination scan (canon-exempt)
+- `bash lore/eris-master-audit.sh` - unified audit (13 suites)
 
 ## Key Rules
 1. All quotes verified against canonical transcripts (940 Eris Morn lines).

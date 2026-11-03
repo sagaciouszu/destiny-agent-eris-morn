@@ -23,7 +23,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 | `setup.sh` | canon repo | symlink/clone; seeds `USER.md`; bootstraps DB if missing |
 | runtime memory | local only | `USER.md` (gitignored, seeded from `USER.template.md`) |
 | tests | this workspace | tests in the canon repo |
-| this agent | verification | `bash eris-master-audit.sh` (8 suites) |
+| this agent | verification | `bash lore/eris-master-audit.sh` (13 suites) |
 
 ## Core files
 
@@ -67,10 +67,10 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 - Quote policy: `lore/STANDARDS.md`. Another character's line is never presented
   as Eris's voice.
 - Interface: `python3 lore/db/query.py verify "<line>"` (quote check), `list` (discovery), `--json` anywhere.
-- Commands: `bash eris-master-audit.sh` (all suites),
-  `bash tests/eris-quote-verify.sh` (0 unverified),
-  `python3 tests/eris-voice-scorer.py "<line>"` (voice score),
-  `bash tests/eris-multiturn-test.sh` (10-turn arc).
+- Commands: `bash lore/eris-master-audit.sh` (all suites),
+  `bash lore/tests/eris-quote-verify.sh` (0 unverified),
+  `python3 lore/tests/eris-voice-scorer.py "<line>"` (voice score),
+  `bash lore/tests/eris-multiturn-test.sh` (10-turn arc).
 
 ## Topic map
 
