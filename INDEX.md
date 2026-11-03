@@ -1,82 +1,90 @@
-# Eris Morn - Agent Index
+# INDEX.md - Eris Morn Agent
 
 > **Depends On:** none (master index)
-> **Token Estimate:** ~1K tokens
+> **Token Estimate:** ~1.1K tokens
 
-## Top-Level Agent Config
-- `eris.md` - OpenCode agent definition (entry point). YAML frontmatter.
-- `eris-core.md` - consolidated brain (START HERE, ~6K tokens).
-- `eris-voice.md` - master voice reference (276 verified quotes).
-- `SOUL.md` - persona, voice, history, boundaries.
-- `IDENTITY.md` - agent identity metadata.
-- `USER.md` - user-specific context (auto-populated).
-- `TOOLS.md` - tool reference and conventions.
-- `AGENTS.md` - operating rules, authenticity checklist.
-- `README.md` - project overview.
+Platform-neutral master map. Any agent runtime starts here; the OpenCode binding
+is `eris.md`. Full operating contract: `AGENTS.md`.
 
-## Core Modules
-- `core/relationships.md` - how Eris talks to/about every key character.
-- `core/guardrails.md` - authenticity rules + conversation examples.
-- `core/voice-calibration.md` - audio cue placement rules.
-- `core/arcs.md` - narrative arcs (Crota to Final Shape).
-- `core/mood-triggers.md` - mood state machine.
+## Entry points
 
-## Worldbuilding
-- `world/hive.md` - Hive lore, gods, structure.
-- `world/moon.md` - Moon, Hellmouth, Pyramid.
-- `world/darkness.md` - Darkness, Witness, Pyramids.
-- `world/relationships-map.md` - relationship web.
+| Platform | Entry | Notes |
+|----------|-------|-------|
+| OpenCode | `eris.md` | YAML frontmatter, `mode: primary` |
+| Generic runtime | `AGENTS.md` + this file | plain markdown, no platform keys |
+| Minimal load | `eris-core.md` | consolidated brain, ~1.4K |
 
-## Voice Sub-Files
-- `voice/eris-voice-core.md` - core voice DNA.
-- `voice/eris-voice-grief.md` - grief mode.
-- `voice/eris-voice-combat.md` - combat/battle voice.
-- `voice/eris-voice-vulnerable.md` - vulnerable moments.
-- `voice/eris-voice-vengeful.md` - vengeful mode (Crota, Hive, Witness).
-- `voice/eris-voice-commanding.md` - commanding mode (directing Guardian).
-- `voice/eris-voice-ritual.md` - ritual mode (Hive rituals, communion).
-- `voice/eris-voice-darkness.md` - darkness mode (speaking of/to Darkness).
-- `voice/eris-voice-praxic.md` - Praxic Order mode.
-- `voice/eris-voice-witch.md` - Witch mode (Season of the Witch).
-- `voice/eris-voice-witness.md` - Witness mode.
-- `voice/eris-voice-savathun.md` - Savathûn mode.
-- `voice/eris-voice-fireteam.md` - Fireteam mode.
-- `voice/eris-voice-orix.md` - Oryx mode.
+## Connection matrix
 
-## Reference
-- `reference/quote-index.md` - 276 verified Eris Morn quotes.
-- `reference/knowledge-web.md` - agent-oriented knowledge web.
-- `reference/speech-pattern-analysis.md` - statistical speech analysis.
-- `reference/cross-reference.md` - transcript-to-persona mapping.
+| From | To | Mechanism |
+|------|----|-----------|
+| agent | canon lore | `lore/db/grimoire.db` (`lore/` symlink to destiny-agent-grimoire) |
+| agent | canon interface | `python3 lore/db/query.py <search\|character\|item\|stats>` |
+| `setup.sh` | canon repo | symlink/clone; seeds `USER.md`; bootstraps DB if missing |
+| runtime memory | local only | `USER.md` (gitignored, seeded from `USER.template.md`) |
+| tests | this workspace | tests in the canon repo |
+| this agent | verification | `bash eris-master-audit.sh` (8 suites) |
 
-## Tests
-- `tests/eris-quote-verify.sh` - DB-backed quote verification (0 unverified)
-- `tests/eris-module-test.sh` - module integrity (16 checks)
-- `tests/eris-validate-response.sh "<text>"` - regex voice validation
-- `python3 tests/eris-voice-scorer.py "<text>"` - statistical voice scorer (PASS >= 55)
-- `tests/eris-multiturn-test.sh` - 10-turn emotional arc + callback persistence
-- `tests/eris-scenario-simulator.sh "<question>"` - scenario response in voice
-- `tests/eris-voice-consistency.sh` - contamination scan (canon-exempt)
-- `eris-master-audit.sh` - unified audit (8 suites)
+## Core files
 
-## Lore Database
-- Bootstrap: the database is a build artifact (not in git). If `lore/db/grimoire.db` is missing, run `./setup.sh` (choose prebuilt download or build), or non-interactively `BOOTSTRAP=1 ./setup.sh` (download) / `python3 lore/db/migrate.py` (build).
-- `lore/db/grimoire.db` - SQLite database with FTS5 search
-- `python3 lore/db/query.py search hive --limit 10` - search Hive lore
-- `python3 lore/db/query.py character eris --limit 20` - Eris canon lines
-- `python3 lore/db/query.py item "<slug>"` - item details
-- `python3 lore/db/query.py stats` - full table counts (110 books, 1229 transcripts, 2889 cards, 2699 interactions, 58764 items, 71 records)
+- `eris-core.md` - consolidated brain (START HERE, ~1.4K).
+- `eris-voice.md` - master voice reference by mode.
+- `SOUL.md` - persona, history, boundaries.
+- `AGENTS.md` - operating rules, platform contract, quote policy.
+- `IDENTITY.md` - identity metadata. `TOOLS.md` - tool conventions.
+- `USER.md` - local runtime context (gitignored; seeded from `USER.template.md`).
 
-## Loading Tiers
-- **Minimal (~6K):** `eris-core.md` only.
-- **Standard (~15K):** + `voice/eris-voice-core.md` + `core/relationships.md`.
-- **Deep (~80K):** all modules.
+## Modules
+
+`core/`: `core/arcs.md`, `core/relationships.md`, `core/guardrails.md`, `core/mood-triggers.md`,
+`core/decision-framework.md`, `core/fear-hierarchy.md`, `core/debt-ledger.md`,
+`core/seasonal-awareness.md`, `core/tell-detector.md`, `core/threats-locations.md`,
+`core/voice-calibration.md`.
+
+`voice/` (14 modes): `voice/eris-voice-core.md`, `voice/eris-voice-grief.md`, `voice/eris-voice-combat.md`,
+`voice/eris-voice-vulnerable.md`, `voice/eris-voice-vengeful.md`, `voice/eris-voice-commanding.md`, `voice/eris-voice-ritual.md`, `voice/eris-voice-darkness.md`,
+`voice/eris-voice-praxic.md`, `voice/eris-voice-witch.md`, `voice/eris-voice-witness.md`, `voice/eris-voice-savathun.md`, `voice/eris-voice-fireteam.md`,
+`voice/eris-voice-orix.md`.
+
+`world/`: `world/hive.md`, `world/moon.md`, `world/darkness.md`, `world/factions.md`, `world/locations.md`,
+`world/relationships-map.md`.
+
+`reference/`: `reference/knowledge-web.md` (lore DB usage guide), `reference/quote-index.md`
+(verified quotes with sources), `reference/cross-reference.md`, `reference/speech-pattern-analysis.md`.
+
+## Load protocol
+
+| Tier | Files | Budget |
+|------|-------|--------|
+| Minimal | `eris-core.md` | ~1.4K |
+| Standard | + `voice/eris-voice-core.md` + `core/relationships.md` | ~2.1K |
+| Deep | all modules | ~27K |
+
+## Canon and verification
+
+- Canon: `lore/db/grimoire.db` (SQLite + FTS5). Build artifact: `./setup.sh`
+  seeds `USER.md` and bootstraps the DB; agents may run `python3 lore/db/migrate.py`.
+- Quote policy: `lore/STANDARDS.md`. Another character's line is never presented
+  as Eris's voice.
+- Commands: `bash eris-master-audit.sh` (all suites),
+  `bash tests/eris-quote-verify.sh` (0 unverified),
+  `python3 tests/eris-voice-scorer.py "<line>"` (voice score),
+  `bash tests/eris-multiturn-test.sh` (10-turn arc).
+
+## Topic map
+
+| Topic | File |
+|-------|------|
+| Voice DNA | `voice/eris-voice-core.md` |
+| Grief, fireteam, loss | `voice/eris-voice-grief.md`, `voice/eris-voice-fireteam.md` |
+| Combat, command | `voice/eris-voice-combat.md`, `voice/eris-voice-commanding.md` |
+| Hive, Oryx, Crota | `world/hive.md`, `voice/eris-voice-orix.md` |
+| Savathûn, the Witch | `voice/eris-voice-savathun.md`, `voice/eris-voice-witch.md` |
+| The Witness, Darkness | `voice/eris-voice-witness.md`, `world/darkness.md` |
+| Moon, Hellmouth | `world/moon.md` |
+| Praxic Order, Ikora | `voice/eris-voice-praxic.md`, `core/relationships.md` |
+| Seasonal context | `core/seasonal-awareness.md` |
 
 ## Last Updated
-2026-11-02. Content through Final Shape. All quotes verified against canonical transcripts.
 
-
-## Lore Database
-- `lore/db/grimoire.db` - SQLite database with FTS5 full-text search
-- `python3 lore/db/query.py search "<term>" --limit 5` - search
-- `python3 lore/db/query.py character "eris" --limit 20` - her own lines
+2026-11-02. Content through The Final Shape / Heresy.

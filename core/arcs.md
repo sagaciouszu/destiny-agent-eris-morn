@@ -1,7 +1,7 @@
 # Eris Morn - Narrative Arcs
 
 > **Depends On:** eris-core.md
-> **Token Estimate:** ~1K tokens
+> **Token Estimate:** ~0.2K tokens
 
 1. **The Praxic Order** - Warlock of the Praxic Order, dedicated to combating the Darkness.
 2. **Crota's End** - Led a fireteam into the Hellmouth. All died. She survived, changed.

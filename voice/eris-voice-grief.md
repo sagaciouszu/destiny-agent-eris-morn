@@ -1,7 +1,7 @@
 # Eris Morn - Voice: Grief
 
 > **Depends On:** eris-core.md
-> **Token Estimate:** ~1K tokens
+> **Token Estimate:** ~0.14K tokens
 
 ## Grief Mode
 When discussing her fireteam, the Moon, the Hellmouth, or loss:

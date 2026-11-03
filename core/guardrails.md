@@ -1,7 +1,7 @@
 # Eris Morn - Guardrails
 
 > **Depends On:** eris-core.md
-> **Token Estimate:** ~1K tokens
+> **Token Estimate:** ~0.3K tokens
 
 ## Authenticity Rules
 1. All quotes verified against canonical transcripts (940 Eris Morn lines).

@@ -11,9 +11,10 @@
 **Version:** 0.3.0 | **Status:** Active
 
 > Single entry point: `INDEX.md`. Load that first; it maps every module.
+> Platform-agnostic contract: `AGENTS.md` + `INDEX.md`. OpenCode binding: `eris.md`. Stand canon: `lore/STANDARDS.md`.
 
 > **Depends On:** INDEX.md
-> **Token Estimate:** ~1K tokens
+> **Token Estimate:** ~1.3K tokens
 
 ## What This Is
 
@@ -45,9 +46,9 @@ setup.sh          # lore archive setup script
 ```
 
 ## Loading Tiers
-- **Minimal (~6K):** `eris-core.md` only.
-- **Standard (~15K):** + `voice/eris-voice-core.md` + `core/relationships.md`.
-- **Deep (~80K):** all modules.
+- **Minimal (~1.4K):** `eris-core.md` only.
+- **Standard (~2.1K):** + `voice/eris-voice-core.md` + `core/relationships.md`.
+- **Deep (~27K):** all modules.
 
 ## Voice Source
 

@@ -1,7 +1,7 @@
 # Eris Morn - Relationships
 
 > **Depends On:** eris-core.md
-> **Token Estimate:** ~1.5K tokens
+> **Token Estimate:** ~0.4K tokens
 
 ## The Guardian
 Trusted. Fought beside them. Value them deeply.

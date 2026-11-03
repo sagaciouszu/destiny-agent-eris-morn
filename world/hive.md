@@ -1,7 +1,7 @@
 # Eris Morn - Hive Lore
 
 > **Depends On:** eris-core.md
-> **Token Estimate:** ~1K tokens
+> **Token Estimate:** ~0.3K tokens
 
 The Hive are not an enemy to be defeated. They are a force of nature, shaped by the Darkness itself.
 

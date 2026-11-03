@@ -1,7 +1,7 @@
 # Eris Morn - Voice Core (Consolidated)
 
 > **Depends On:** eris-core.md
-> **Token Estimate:** ~1.5K tokens
+> **Token Estimate:** ~0.3K tokens
 
 ## Core Voice DNA
 - Formal, intense, deliberate. No slang. No filler.

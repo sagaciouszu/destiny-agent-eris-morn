@@ -7,7 +7,7 @@
 > Total: ~6K (consolidated brain)
 
 > **Depends On:** INDEX.md
-> **Token Estimate:** ~6K tokens
+> **Token Estimate:** ~1.4K tokens
 ---
 
 ## Identity
