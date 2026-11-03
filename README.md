@@ -22,24 +22,46 @@ A complete, platform-agnostic roleplay brain for Eris Morn: voice rules, memory,
 behavior modules and a verified quote corpus, backed by the Destiny Agent Grimoire
 database. Every quote traces to canon; every suite is verifiable.
 
-## Quick start (humans)
+## Quick start (Guardians)
 
-> This repository is private. Authenticate first (`gh auth login`) or use a
-> personal access token, then clone.
+**Step 1: clone.** This repository is private, so authenticate first
+(`gh auth login`) or use a personal access token.
 
 ```bash
 git clone https://github.com/sagaciouszu/eris-morn.git
 cd eris-morn
-./setup.sh                 # clones the lore archive and bootstraps the database
-bash lore/eris-master-audit.sh    # expect 13/13
 ```
 
-Non-interactive and offline-friendly options:
+**Step 2: bootstrap. Run exactly one of these, not several.**
+
+Interactive (asks download or build):
 
 ```bash
-BOOTSTRAP=1 ./setup.sh                       # download the prebuilt database
-BOOTSTRAP=2 ./setup.sh                       # build the database from the checkout
-./setup.sh /path/to/destiny-agent-grimoire   # reuse an existing checkout (symlink)
+./setup.sh
+```
+
+Prebuilt database, no prompt (fastest):
+
+```bash
+BOOTSTRAP=1 ./setup.sh
+```
+
+Build from the checkout, no prompt:
+
+```bash
+BOOTSTRAP=2 ./setup.sh
+```
+
+Reuse an existing checkout instead of cloning:
+
+```bash
+./setup.sh /path/to/destiny-agent-grimoire
+```
+
+**Step 3: verify.**
+
+```bash
+bash lore/eris-master-audit.sh
 ```
 
 Point your runtime at `INDEX.md` (any agent runtime) or `eris.md` (OpenCode,
