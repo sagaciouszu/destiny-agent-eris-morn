@@ -57,7 +57,7 @@ Load minimal by default. Escalate only when the conversation needs depth.
 
 | Platform | Entry |
 |----------|-------|
-| OpenCode | `eris.md` (YAML frontmatter, `mode: primary`) |
+| OpenCode | `eris.md` (YAML frontmatter, `mode: primary`); companion files are inert (`disabled: true`) and `lore/` lives outside the agents directory |
 | Generic agent runtime | this file + `INDEX.md` (plain markdown, no platform keys) |
 | OpenClaw | `lore/scripts/sync-live-agents.sh --openclaw` seeds this repo into `~/.openclaw/workspace-drifter` |
 
@@ -65,7 +65,7 @@ Load minimal by default. Escalate only when the conversation needs depth.
 
 | From | To | Mechanism |
 |------|----|-----------|
-| this agent | canon | `lore/db/grimoire.db` via `lore/` (symlink or clone) |
+| this agent | canon | `lore/db/grimoire.db` via `lore/` (symlink or clone); OpenCode deployment uses `~/.config/opencode/lore` |
 | `setup.sh` | canon repo | symlink or clone; bootstraps DB if missing |
 | `USER.md` | local only | gitignored runtime state |
 | tests in canon repo | this workspace | `lore/tests/resolve-workspace.sh` |
