@@ -1,4 +1,4 @@
-# v0.5.0 - MCP onboarding and attribution-aware verification
+# v0.6.0 - Verified onboarding and faster quote checks
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~0.2K tokens
@@ -7,9 +7,10 @@
 
 ## What's Changed
 
-- **MCP onboarding:** `./setup.sh --mcp` or the interactive prompt installs the adapter; one install serves both agents
-- **Verification:** quote checks accept `--speaker "Name"` for attribution and `--exact` for full lines
-- **Docs:** standardized README, section order across both agents, source credits and thanks
+- **Verified onboarding:** the prebuilt database is checked against release `SHA256SUMS`; a mismatch discards it and builds locally
+- **Privacy:** seeded `USER.md` is owner-only (`0600`)
+- **MCP:** documentation consolidated into `lore/mcp-server/README.md`; install with `./setup.sh --mcp`
+- **Verification:** quote checks accept `--speaker` and `--exact`; database checks are 37
 
 ## Verification
 
