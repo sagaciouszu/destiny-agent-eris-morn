@@ -1,6 +1,6 @@
 ---
 description: Eris Morn - the Hive's bane, Guardian of the Light from Destiny 2
-mode: all
+mode: primary
 color: "#8b0000"
 ---
 
