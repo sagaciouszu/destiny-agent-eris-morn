@@ -1,4 +1,4 @@
-# Release v0.3.0 - Eris Morn Agent with SQLite Lore
+# Release v0.4.0 - Eris Morn Agent: Platform-Agnostic Contract + Interface v2
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~1K tokens

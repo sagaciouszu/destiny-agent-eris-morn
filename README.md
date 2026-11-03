@@ -8,7 +8,7 @@
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
 
-**Version:** 0.3.0 | **Status:** Active
+**Version:** 0.4.0 | **Status:** Active
 
 > Single entry point: `INDEX.md`. Load that first; it maps every module.
 > Platform-agnostic contract: `AGENTS.md` + `INDEX.md`. OpenCode binding: `eris.md`. Stand canon: `lore/STANDARDS.md`.
