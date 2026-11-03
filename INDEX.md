@@ -19,7 +19,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 | From | To | Mechanism |
 |------|----|-----------|
 | agent | canon lore | `lore/db/grimoire.db` (`lore/` symlink to destiny-agent-grimoire) |
-| agent | canon interface | `python3 lore/db/query.py <search\|character\|item\|stats>` |
+| agent | canon interface | `python3 lore/db/query.py <search\|character\|item\|verify\|list\|stats>` |
 | `setup.sh` | canon repo | symlink/clone; seeds `USER.md`; bootstraps DB if missing |
 | runtime memory | local only | `USER.md` (gitignored, seeded from `USER.template.md`) |
 | tests | this workspace | tests in the canon repo |
@@ -66,6 +66,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
   seeds `USER.md` and bootstraps the DB; agents may run `python3 lore/db/migrate.py`.
 - Quote policy: `lore/STANDARDS.md`. Another character's line is never presented
   as Eris's voice.
+- Interface: `python3 lore/db/query.py verify "<line>"` (quote check), `list` (discovery), `--json` anywhere.
 - Commands: `bash eris-master-audit.sh` (all suites),
   `bash tests/eris-quote-verify.sh` (0 unverified),
   `python3 tests/eris-voice-scorer.py "<line>"` (voice score),

@@ -66,4 +66,5 @@ The Eris agent queries lore via the `grimoire.db` database:
 ## Lore archive usage
 
 - `lore/db/grimoire.db` - query via `python3 lore/db/query.py <command>`
+- **Quote check:** `python3 lore/db/query.py verify "<line>"` (exit 1 = not canon)
 - Markdown source: `lore/source/` (unused at runtime; only for regeneration).
