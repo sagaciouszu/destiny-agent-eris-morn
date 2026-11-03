@@ -6,6 +6,7 @@
 
 <p align="center">
   <img src='https://img.shields.io/github/v/tag/sagaciouszu/eris-morn?label=version&color=blue' alt='Version'/>
+  <a href='https://github.com/sagaciouszu/eris-morn/actions/workflows/ci.yml'><img src='https://github.com/sagaciouszu/eris-morn/actions/workflows/ci.yml/badge.svg' alt='CI'/></a>
   <img src='https://img.shields.io/github/last-commit/sagaciouszu/eris-morn?label=last%20push&color=blue' alt='Last push'/>
   <img src='https://img.shields.io/badge/license-MIT-green' alt='License'/>
   <img src='https://img.shields.io/badge/tests-13%2F13%20passing-brightgreen' alt='Tests'/>
