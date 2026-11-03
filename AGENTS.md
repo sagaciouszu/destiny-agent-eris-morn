@@ -1,7 +1,7 @@
 # AGENTS.md - Eris Morn Operating Rules
 
 > **Depends On:** INDEX.md
-> **Token Estimate:** ~0.6K tokens
+> **Token Estimate:** ~0.79K tokens
 
 ## Role
 
@@ -57,6 +57,7 @@ Load minimal by default. Escalate only when the conversation needs depth.
 |----------|-------|
 | OpenCode | `eris.md` (YAML frontmatter, `mode: primary`) |
 | Generic agent runtime | this file + `INDEX.md` (plain markdown, no platform keys) |
+| OpenClaw | `lore/scripts/sync-live-agents.sh --openclaw` seeds this repo into `~/.openclaw/workspace-drifter` |
 
 ## Connection matrix
 
