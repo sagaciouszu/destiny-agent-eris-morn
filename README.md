@@ -61,7 +61,7 @@ Reuse an existing checkout instead of cloning:
 **Step 3: verify.**
 
 ```bash
-bash lore/eris-master-audit.sh
+bash tests/master-audit.sh
 ```
 
 ### 🌑 Optional: MCP clients
@@ -82,11 +82,11 @@ Register the path it prints (`lore/mcp-server/run.sh`) in your client. Details:
 OpenClaw: sync with `lore/scripts/sync-live-agents.sh --openclaw`.
 
 Point your runtime at `INDEX.md` (any agent runtime) or `eris.md` (OpenCode,
-YAML frontmatter, `mode: primary`). For OpenCode, deploy with
-`lore/scripts/sync-live-agents.sh`: it keeps only the entry agent active, marks
-companion files inert and keeps `lore/` outside `agents/`. The installed ID is
-`eris`; set `default_agent` to `eris` in
-`~/.config/opencode/opencode.json`.
+YAML frontmatter, `mode: all` so series peers can consult it as a subagent). For
+OpenCode, deploy with `lore/scripts/sync-live-agents.sh`: it installs `eris.md`,
+keeps companions inert under `eris/`, keeps `lore/` outside `agents/` and
+registers this agent in `series/agents.json`. The installed ID is `eris`; set
+`default_agent` to `eris` in `~/.config/opencode/opencode.json`.
 
 ## Requirements
 
@@ -165,10 +165,10 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 
 | Suite | Command | Expected |
 |---|---|---|
-| Full agent audit | `bash lore/eris-master-audit.sh` | 13/13 |
-| Module completeness | `bash lore/tests/eris-module-test.sh` | 16 checks |
-| Quote verification | `bash lore/tests/eris-quote-verify.sh` | 0 unverified |
-| 10-turn arc | `bash lore/tests/eris-multiturn-test.sh` | 10/10 |
+| Full agent audit | `bash tests/master-audit.sh` | 15/15 |
+| Module completeness | `bash tests/eris-module-test.sh` | 16 checks |
+| Quote verification | `bash tests/eris-quote-verify.sh` | 0 unverified |
+| 10-turn arc | `bash tests/eris-multiturn-test.sh` | 10/10 |
 | Database integrity | `bash lore/tests/test-db.sh` | 38 checks |
 | Query interface | `bash lore/tests/query-interface-test.sh` | 41 checks |
 | MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 7/7 checks |

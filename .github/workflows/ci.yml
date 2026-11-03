@@ -35,4 +35,4 @@ jobs:
       - name: Eris audit
         env:
           WORKSPACE: ${{ github.workspace }}
-        run: bash lore/eris-master-audit.sh
+        run: bash tests/master-audit.sh

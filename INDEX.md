@@ -10,7 +10,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 
 | Platform | Entry | Notes |
 |----------|-------|-------|
-| OpenCode | `eris.md` | YAML frontmatter, `mode: primary` |
+| OpenCode | `eris.md` | YAML frontmatter, `mode: all` |
 | Generic runtime | `AGENTS.md` + this file | plain markdown, no platform keys |
 | OpenClaw | `lore/scripts/sync-live-agents.sh --openclaw` | seeds the OpenClaw workspace |
 | Minimal load | `eris-core.md` | consolidated brain, ~1.4K |
@@ -24,7 +24,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 | `setup.sh` | canon repo | symlink/clone; seeds `USER.md`; bootstraps DB if missing |
 | runtime memory | local only | `USER.md` (gitignored, seeded from `USER.template.md`) |
 | tests in canon repo | this agent workspace | `lore/tests/resolve-workspace.sh` (layout-independent) |
-| this agent | verification | `bash lore/eris-master-audit.sh` (13 suites) |
+| this agent | verification | `bash tests/master-audit.sh` (15 suites) |
 
 ## Core files
 
@@ -71,10 +71,10 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 - Interface: `python3 lore/db/query.py verify "<line>"` (quote check), `book`/`transcript`/`find-item`/`record`/`character-info` (reads), `verify-many` (batch), `list` (discovery), `--json` anywhere.
 - MCP (optional): `lore/mcp-server/run.sh`; install `./setup.sh --mcp`; details in
   `lore/mcp-server/README.md`.
-- Commands: `bash lore/eris-master-audit.sh` (all suites),
-  `bash lore/tests/eris-quote-verify.sh` (0 unverified),
-  `python3 lore/tests/eris-voice-scorer.py "<line>"` (voice score),
-  `bash lore/tests/eris-multiturn-test.sh` (10-turn arc).
+- Commands: `bash tests/master-audit.sh` (all suites),
+  `bash tests/eris-quote-verify.sh` (0 unverified),
+  `python3 tests/eris-voice-scorer.py "<line>"` (voice score),
+  `bash tests/eris-multiturn-test.sh` (10-turn arc).
 
 ## Topic map
 
