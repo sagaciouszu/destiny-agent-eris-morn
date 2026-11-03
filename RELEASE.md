@@ -12,10 +12,10 @@
 - **Grimoire interface v2 wired in** - `verify` quote check, `list` discovery, `--json`, snippet-first search across AGENTS/INDEX/TOOLS/agent def/core/knowledge-web
 - **`USER.md` gitignored** - runtime state seeded from `USER.template.md` by `setup.sh`; never committed
 - **Agent-safe bootstrap** - prebuilt download or local build, `BOOTSTRAP=1|2`, never blocks
-- **Voice integrity** - cross-character attribution maintained (0 issues); 8-suite audit
+- **Voice integrity** - cross-character attribution maintained (0 issues); 13-suite audit
 - **Measured tiers** - minimal ~1.4K, standard ~2.1K, deep ~27K (was overstated 4-6x)
-- **Clone-mode parity**
-- **Centralized tests** - Eris suites moved into the archive next to the Drifter's; one shared `tests/agent-audit.sh` runner, identical setup flow and `.gitignore` across both agents - module test accepts `lore/` as a symlink or a clone and never scans inside it
+- **Clone-mode parity** - module test accepts `lore/` as a symlink or a clone and never scans inside it
+- **Centralized tests** - Eris suites moved into the archive next to the Drifter's; one shared `tests/agent-audit.sh` runner; identical setup flow and `.gitignore` across both agents
 
 ## Verification
 
