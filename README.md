@@ -13,7 +13,7 @@
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
 
-**Version:** 0.4.1 | **Last push:** 2026-11-02 | **Status:** Active
+**Version:** 0.4.1 | **Last push:** 2026-11-03 | **Status:** Active
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~1.6K tokens
@@ -24,8 +24,7 @@ database. Every quote traces to canon; every suite is verifiable.
 
 ## Quick start for Guardians
 
-**Step 1: clone.** This repository is private, so authenticate first
-(`gh auth login`) or use a personal access token.
+**Step 1: clone.**
 
 ```bash
 git clone https://github.com/sagaciouszu/eris-morn.git
@@ -101,6 +100,9 @@ Load in this order:
 - Lookup: `search`, `character`, `item`, `list`, `stats`; every command accepts
   `--json`, search returns snippets unless `--full`.
 - Standard: `lore/STANDARDS.md` is the database and quote contract.
+- MCP (optional): `lore/mcp-server/run.sh` serves the same tools over stdio
+  for clients without shell access; read-only, official SDK. Install once with
+  `WITH_MCP=1 ./setup.sh` or `bash lore/mcp-server/install.sh`.
 - Runtime memory: `USER.md` is gitignored and seeded from its template by
   `setup.sh`. It never leaves the machine.
 
