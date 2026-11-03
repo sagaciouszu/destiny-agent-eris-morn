@@ -85,7 +85,7 @@ Point your runtime at `INDEX.md` (any agent runtime) or `eris.md` (OpenCode,
 YAML frontmatter, `mode: primary`). For OpenCode, deploy with
 `lore/scripts/sync-live-agents.sh`: it keeps only the entry agent active, marks
 companion files inert and keeps `lore/` outside `agents/`. The installed ID is
-`eris/eris`; set `default_agent` to `eris/eris` in
+`eris`; set `default_agent` to `eris` in
 `~/.config/opencode/opencode.json`.
 
 ## Requirements
@@ -183,7 +183,7 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
   directory, or set `WORKSPACE=$PWD`.
 - **OpenCode does not list the agent:** rerun
   `lore/scripts/sync-live-agents.sh`, then confirm the installed `eris.md` and
-  `default_agent` (`eris/eris`) in `opencode.json`.
+  `default_agent` (`eris`) in `opencode.json`.
 - **MCP client shows no Grimoire tools:** run `./setup.sh --mcp`, then use the
   absolute path to `lore/mcp-server/run.sh` in the client config.
 - **Degraded mode:** without the archive the persona files still work; canon
