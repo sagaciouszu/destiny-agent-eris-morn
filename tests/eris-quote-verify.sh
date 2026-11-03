@@ -6,7 +6,7 @@
 DB="${DB:-$(cd "$(dirname "$0")/../lore" 2>/dev/null && pwd)/db/grimoire.db}"
 [ -f "$DB" ] || DB="$(cd "$(dirname "$0")/.." && pwd)/lore/db/grimoire.db"
 WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/.." && pwd)}"
-[ -f "$DB" ] || { echo "FAIL: database not found"; exit 1; }
+[ -f "$DB" ] || { echo "FAIL: database not found at $DB - bootstrap: ./setup.sh, or python3 lore/db/migrate.py (see README)"; exit 1; }
 
 python3 - "$DB" "$WORKSPACE" << 'PYEOF'
 import re, os, sys, sqlite3

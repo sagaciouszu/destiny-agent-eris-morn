@@ -86,6 +86,7 @@
 - `python3 lore/db/query.py stats` - database stats
 - `sqlite3 lore/db/grimoire.db "SELECT text FROM transcript_lines WHERE speaker LIKE '%Eris%'"` - direct SQL
 - `python3 lore/db/query.py search hive --limit 10` - search Hive lore
+- Bootstrap: the database is a build artifact (not in git). If `lore/db/grimoire.db` is missing, run `./setup.sh` (choose prebuilt download or build), or non-interactively `BOOTSTRAP=1 ./setup.sh` (download) / `python3 lore/db/migrate.py` (build).
 
 ## Loading Tiers
 - **Minimal (~6K):** eris-core.md only.

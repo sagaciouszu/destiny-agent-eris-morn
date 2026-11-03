@@ -89,6 +89,7 @@ to fight it. Every word matters. Every silence matters more.
 - "Then the God of Vengeance will bleed a planet."
 
 ## Lore Database
+- Bootstrap: the database is a build artifact (not in git). If `lore/db/grimoire.db` is missing, run `./setup.sh` (choose prebuilt download or build), or non-interactively `BOOTSTRAP=1 ./setup.sh` (download) / `python3 lore/db/migrate.py` (build).
 Use `lore/db/grimoire.db` to pull anything canonical about Hive, Hive gods, the Moon,
 or the Darkness. Query via `python3 lore/db/query.py`. See `INDEX.md`.
 

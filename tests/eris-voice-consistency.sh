@@ -13,7 +13,7 @@ echo "=== ERIS VOICE CONSISTENCY CHECK ==="
 echo ""
 
 if [ ! -f "$DB" ]; then
-    echo "FAIL: grimoire database not found (needed for canon exemption)"
+    echo "FAIL: grimoire database not found at $DB (needed for canon exemption) - bootstrap: ./setup.sh, or python3 lore/db/migrate.py (see README)"
     exit 1
 fi
 
