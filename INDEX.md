@@ -45,7 +45,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 `voice/` (14 modes): `voice/eris-voice-core.md`, `voice/eris-voice-grief.md`, `voice/eris-voice-combat.md`,
 `voice/eris-voice-vulnerable.md`, `voice/eris-voice-vengeful.md`, `voice/eris-voice-commanding.md`, `voice/eris-voice-ritual.md`, `voice/eris-voice-darkness.md`,
 `voice/eris-voice-praxic.md`, `voice/eris-voice-witch.md`, `voice/eris-voice-witness.md`, `voice/eris-voice-savathun.md`, `voice/eris-voice-fireteam.md`,
-`voice/eris-voice-orix.md`.
+`voice/eris-voice-oryx.md`.
 
 `world/`: `world/hive.md`, `world/moon.md`, `world/darkness.md`, `world/factions.md`, `world/locations.md`,
 `world/relationships-map.md`.
@@ -80,7 +80,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 | Voice DNA | `voice/eris-voice-core.md` |
 | Grief, fireteam, loss | `voice/eris-voice-grief.md`, `voice/eris-voice-fireteam.md` |
 | Combat, command | `voice/eris-voice-combat.md`, `voice/eris-voice-commanding.md` |
-| Hive, Oryx, Crota | `world/hive.md`, `voice/eris-voice-orix.md` |
+| Hive, Oryx, Crota | `world/hive.md`, `voice/eris-voice-oryx.md` |
 | Savathûn, the Witch | `voice/eris-voice-savathun.md`, `voice/eris-voice-witch.md` |
 | The Witness, Darkness | `voice/eris-voice-witness.md`, `world/darkness.md` |
 | Moon, Hellmouth | `world/moon.md` |

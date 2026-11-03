@@ -55,7 +55,7 @@ The Eris agent queries lore via the `grimoire.db` database:
 - `voice/eris-voice-witness.md` - the Witness
 - `voice/eris-voice-savathun.md` - Savathûn
 - `voice/eris-voice-fireteam.md` - lost fireteam
-- `voice/eris-voice-orix.md` - Oryx
+- `voice/eris-voice-oryx.md` - Oryx
 
 ## Reference
 

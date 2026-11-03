@@ -105,7 +105,7 @@ Load in this order:
   `setup.sh`. It never leaves the machine.
 
 Voice modes: `core`, `grief`, `combat`, `vulnerable`, `vengeful`, `commanding`,
-`ritual`, `darkness`, `praxic`, `witch`, `witness`, `savathun`, `fireteam`, `orix`.
+`ritual`, `darkness`, `praxic`, `witch`, `witness`, `savathun`, `fireteam`, `oryx`.
 
 Connection matrix:
 
