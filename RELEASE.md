@@ -1,4 +1,4 @@
-# v0.9.0 - Compendium and coverage
+# v0.10.0 - Compendium and coverage
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~0.2K tokens
