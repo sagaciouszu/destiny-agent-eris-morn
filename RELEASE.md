@@ -1,62 +1,24 @@
 # Release v0.4.0 - Eris Morn Agent: Platform-Agnostic Contract + Interface v2
 
 > **Depends On:** INDEX.md
-> **Token Estimate:** ~1K tokens
+> **Token Estimate:** ~0.4K tokens
 
 **Date:** 2026-11-02
 
-## What this is
+## Highlights
 
-Agent brain/wrapper for Eris Morn (Destiny 2). Voice is formal, intense, grave; no slang, no banter, no "heh"/"nah"/"yeah". All quotes verified against canonical transcripts. Zero unverified quotes.
+- **AGENTS.md rewritten** - platform-neutral operating contract: hard rules, canon/quoting policy, data access, load protocol, platform bindings, connection matrix
+- **INDEX.md rewritten** - entry points for OpenCode and generic runtimes, connection matrix, module inventory, measured load tiers, topic map
+- **Grimoire interface v2 wired in** - `verify` quote check, `list` discovery, `--json`, snippet-first search across AGENTS/INDEX/TOOLS/agent def/core/knowledge-web
+- **`USER.md` gitignored** - runtime state seeded from `USER.template.md` by `setup.sh`; never committed
+- **Agent-safe bootstrap** - prebuilt download or local build, `BOOTSTRAP=1|2`, never blocks
+- **Voice integrity** - cross-character attribution maintained (0 issues); 8-suite audit
+- **Measured tiers** - minimal ~1.4K, standard ~2.1K, deep ~27K (was overstated 4-6x)
 
-Canon lore is served from the shared SQLite database (`lore/db/grimoire.db` in the destiny-agent-grimoire repository), not from markdown files.
+## Verification
 
-## Structure
+- `eris-master-audit.sh`: 8/8
+- quotes: 0 unverified; attribution: 0 cross-character quotes
+- fresh-clone onboarding: seeded `USER.md` + built database + 8/8
 
-- `eris-core.md` - consolidated brain (~6K, START HERE)
-- `core/` - 11 modules (relationships, guardrails, arcs, mood-triggers, voice-calibration, fear-hierarchy, decision-framework, threats-locations, tell-detector, seasonal-awareness, debt-ledger)
-- `world/` - 6 worldbuilding files (hive, moon, darkness, factions, locations, relationships-map)
-- `voice/` - 14 voice sub-files (core, grief, combat, vulnerable, vengeful, commanding, ritual, darkness, praxic, witch, witness, savathun, fireteam, oryx)
-- `reference/` - 4 analysis files (quote-index, knowledge-web, speech-pattern-analysis, cross-reference)
-- `tests/` - quote verify (DB-backed), module test, response validator, statistical voice scorer, 10-turn multiturn arc, scenario simulator, contamination scan
-- `lore/` - symlink to destiny-agent-grimoire (SQLite DB)
-
-## Voice modes
-
-`core`, `grief`, `combat`, `vulnerable`, `vengeful`, `commanding`, `ritual`, `darkness`, `praxic`, `witch`, `witness`, `savathun`, `fireteam`, `orix`
-
-Grief is always under the surface; it is never performed. When angry, the voice goes cold, not loud.
-
-## Lore integration
-
-All lore queries route through `lore/db/grimoire.db` (71221 dialogue lines, 1229 transcripts, 110 books, 1158 entries, 2889 grimoire cards, 2699 interactions, 58764 items, 71 records):
-
-- `python3 lore/db/query.py character "eris" --limit 20` - Eris canon lines
-- `python3 lore/db/query.py search "hive" --limit 5` - FTS5 search
-- `python3 lore/db/query.py item "<slug>"` - item flavor text
-- `sqlite3 lore/db/grimoire.db "SELECT ..."` - direct SQL
-
-Do not read `lore/source/*.md` at runtime. The database is the interface.
-
-## Test results
-
-- eris-master-audit.sh: 8/8 PASS (module, quotes, validator, consistency, multiturn, scorer, scorer-negative, scenario)
-- eris-module-test.sh: 16/16 PASS
-- eris-quote-verify.sh: 678 checked, 0 unverified
-- eris-validate-response.sh: 4/4 PASS
-- eris-conversation-test.sh (grimoire repo): PASS (all queries hit SQLite)
-
-## Installation
-
-```bash
-cd ~/Work/eris-morn
-./setup.sh /path/to/destiny-agent-grimoire
-```
-
-## Attribution
-
-Fan-made agent brain/wrapper. Not affiliated with or endorsed by Bungie.
-
-- **Destiny 2** - © Bungie, Inc. All lore, characters, locations are Bungie's property.
-- **Ishtar Collective** (https://www.ishtar-collective.net) - Primary source for all ingested lore text.
-- **Destiny Lore Vault** (YouTube) - Audio recordings of key transcripts.
+Fan-made. Not affiliated with or endorsed by Bungie.
