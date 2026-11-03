@@ -68,8 +68,8 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 - Quote policy: `lore/STANDARDS.md`. Another character's line is never presented
   as Eris's voice.
 - Interface: `python3 lore/db/query.py verify "<line>"` (quote check), `list` (discovery), `--json` anywhere.
-- MCP (optional): `lore/mcp-server/run.sh` (six typed tools; install with
-  `./setup.sh --mcp`; docs in `lore/mcp-server/README.md`).
+- MCP (optional): `lore/mcp-server/run.sh`; install `./setup.sh --mcp`; details in
+  `lore/mcp-server/README.md`.
 - Commands: `bash lore/eris-master-audit.sh` (all suites),
   `bash lore/tests/eris-quote-verify.sh` (0 unverified),
   `python3 lore/tests/eris-voice-scorer.py "<line>"` (voice score),
