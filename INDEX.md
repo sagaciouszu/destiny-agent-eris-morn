@@ -68,7 +68,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
   seeds `USER.md` and bootstraps the DB; agents may run `python3 lore/db/migrate.py`.
 - Quote policy: `lore/STANDARDS.md`. Another character's line is never presented
   as Eris's voice.
-- Interface: `python3 lore/db/query.py verify "<line>"` (quote check), `list` (discovery), `--json` anywhere.
+- Interface: `python3 lore/db/query.py verify "<line>"` (quote check), `book`/`transcript`/`find-item`/`record`/`character-info` (reads), `verify-many` (batch), `list` (discovery), `--json` anywhere.
 - MCP (optional): `lore/mcp-server/run.sh`; install `./setup.sh --mcp`; details in
   `lore/mcp-server/README.md`.
 - Commands: `bash lore/eris-master-audit.sh` (all suites),
