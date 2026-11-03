@@ -18,7 +18,7 @@
 - **Deep (~80K):** all modules (see INDEX.md for full map).
 
 ### Quote Verification
-- All quotes verified against canonical transcripts (935 Eris Morn lines) + lore books.
+- All quotes verified against canonical transcripts (940 Eris Morn lines) + lore books.
 - Run: `bash tests/eris-quote-verify.sh`
 
 ### Conventions

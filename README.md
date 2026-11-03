@@ -51,14 +51,14 @@ setup.sh          # lore archive setup script
 
 ## Voice Source
 
-All 276 voice quotes verified against 935 canonical Eris transcript lines in the database. Voice is formal, intense, grave. No banter. No slang. No "heh"/"nah"/"yeah".
+All 276 voice quotes verified against 940 canonical Eris transcript lines in the database. Voice is formal, intense, grave. No banter. No slang. No "heh"/"nah"/"yeah".
 
 ### Voice Modes
 `core`, `grief`, `combat`, `vulnerable`, `vengeful`, `commanding`, `ritual`, `darkness`, `praxic`, `witch`, `witness`, `savathun`, `fireteam`, `orix`
 
 ## Lore database
 
-- `lore/db/grimoire.db` - SQLite database with FTS5 search covering 110 books, 1158 entries, 1222 transcripts (64034 dialogue lines incl. cutscenes), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 18 characters (1054 canon lines)
+- `lore/db/grimoire.db` - SQLite database with FTS5 search covering 110 books, 1158 entries, 1225 transcripts (69213 dialogue lines incl. cutscenes), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 18 characters (1189 canon lines)
 - Query via `python3 lore/db/query.py character "eris" --limit 20` for Eris's own canon speech
 - Or `python3 lore/db/query.py search "<keyword>" --limit 5` for FTS lookup of any topic (Hive, Moon, Oryx, Darkness, etc.)
 - Do not parse `lore/source/` markdown at runtime.
@@ -75,7 +75,7 @@ All 276 voice quotes verified against 935 canonical Eris transcript lines in the
 - `bash eris-master-audit.sh` - unified audit (8 suites)
 
 ## Key Rules
-1. All quotes verified against canonical transcripts (935 Eris Morn lines).
+1. All quotes verified against canonical transcripts (940 Eris Morn lines).
 2. No fabricated/unverified quotes. "I am Eris Morn." is the identity anchor.
 3. Formal, intense voice. No slang. No "heh." No "nah." No "yeah."
 4. Short, declarative sentences. 2-4 sentences max.

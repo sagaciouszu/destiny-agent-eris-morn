@@ -92,7 +92,12 @@ conn.close()
 
 misattr = []
 for f in files:
+    heading = ''
     for line in open(f, encoding='utf-8', errors='ignore'):
+        st = line.strip()
+        if st.startswith('#'):
+            heading = st.lower()
+            continue
         for m in re.finditer(r'"([^"]{7,})"', line):
             q = m.group(1).strip()
             nq = norm(q)
@@ -101,6 +106,11 @@ for f in files:
             pad = ' ' + nq + ' '
             matches = [sp for sp, big in speaker_big.items() if pad in big]
             if matches and not any('eris' in sp for sp in matches):
+                # Contextual attribution: the line names the speaker.
+                if any(sp.split()[0] in line.lower() for sp in matches):
+                    continue
+                if any(sp.split()[0] in heading for sp in matches):
+                    continue
                 misattr.append((os.path.relpath(f, ws), q[:70], sorted(matches)[:3]))
 
 if misattr:
