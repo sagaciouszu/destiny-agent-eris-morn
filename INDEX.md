@@ -22,7 +22,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 | agent | canon interface | `python3 lore/db/query.py <search\|character\|item\|verify\|list\|stats>` |
 | `setup.sh` | canon repo | symlink/clone; seeds `USER.md`; bootstraps DB if missing |
 | runtime memory | local only | `USER.md` (gitignored, seeded from `USER.template.md`) |
-| tests | this workspace | tests in the canon repo |
+| tests in canon repo | this agent workspace | `lore/tests/resolve-workspace.sh` (layout-independent) |
 | this agent | verification | `bash lore/eris-master-audit.sh` (13 suites) |
 
 ## Core files
@@ -31,7 +31,8 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 - `eris-voice.md` - master voice reference by mode.
 - `SOUL.md` - persona, history, boundaries.
 - `AGENTS.md` - operating rules, platform contract, quote policy.
-- `IDENTITY.md` - identity metadata. `TOOLS.md` - tool conventions.
+- `IDENTITY.md` - identity metadata.
+- `TOOLS.md` - tool conventions.
 - `USER.md` - local runtime context (gitignored; seeded from `USER.template.md`).
 
 ## Modules

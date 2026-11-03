@@ -1,31 +1,19 @@
-# Release v0.4.0 - Platform-Agnostic Contract + Interface v2
+# v0.4.0 - Platform-agnostic contract and interface v2
 
 > **Depends On:** INDEX.md
-> **Token Estimate:** ~0.4K tokens
+> **Token Estimate:** ~0.2K tokens
 
-**Date:** 2026-11-02
+**2026-11-02**
 
-## Highlights
+## What's Changed
 
-- **AGENTS.md rewritten** - platform-neutral operating contract: hard rules, canon/quoting policy, data access, load protocol, platform bindings, connection matrix
-- **INDEX.md rewritten** - entry points for OpenCode and generic runtimes, connection matrix, module inventory, measured load tiers, topic map
-- **Grimoire interface v2 wired in** - `verify` quote check, `list` discovery, `--json`, snippet-first search across AGENTS/INDEX/TOOLS/agent def/core/knowledge-web
-- **`USER.md` gitignored** - runtime state seeded from `USER.template.md` by `setup.sh`; never committed
-- **Agent-safe bootstrap** - prebuilt download or local build, `BOOTSTRAP=1|2`, never blocks
-- **Voice integrity** - cross-character attribution maintained (0 issues); 13-suite audit
-- **Measured tiers** - minimal ~1.4K, standard ~2.1K, deep ~27K (was overstated 4-6x)
-- **Clone-mode parity** - module test accepts `lore/` as a symlink or a clone and never scans inside it
-- **Centralized tests** - Eris suites moved into the archive next to the Drifter's; one shared `tests/agent-audit.sh` runner; identical setup flow and `.gitignore` across both agents
+- **New contract:** `AGENTS.md` (platform-neutral rules, canon policy) and `INDEX.md` (entry points, matrix, measured tiers)
+- **Interface v2:** `verify`, `list`, `--json`, snippet-first search across every agent file
+- **Safer memory:** `USER.md` is a gitignored template seeded by `setup.sh`
+- **Bootstrap:** prebuilt download or local build (`BOOTSTRAP=1|2`), never blocks
+- **Voice integrity:** cross-character attribution check, 0 unverified quotes
+- **Consistency:** tests centralized in the archive; identical setup and `.gitignore` with the Drifter
 
 ## Verification
 
-| Suite | Result |
-|-------|--------|
-| `lore/eris-master-audit.sh` | 13/13 |
-| `grimoire-master-audit.sh` | 11/11 |
-| `drifter-master-audit.sh` | 18/18 |
-| quote verification | 0 unverified |
-| attribution | 0 cross-character quotes |
-| fresh-clone onboarding | seeded `USER.md` + built database + 13/13 |
-
-Fan-made. Not affiliated with or endorsed by Bungie.
+13/13 audit, 0 unverified quotes, fresh-clone onboarding PASS.
