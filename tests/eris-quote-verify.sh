@@ -60,9 +60,11 @@ for root, _, fs in os.walk(ws):
             files.append(os.path.join(root, f))
 
 def extract_quotes(path):
-    """Yield quoted strings from prose lines, skipping fenced/inline code."""
+    """Yield quoted strings from prose lines, skipping frontmatter, fenced and inline code."""
     in_fence = False
-    for line in open(path, encoding='utf-8', errors='ignore'):
+    body = open(path, encoding='utf-8', errors='ignore').read()
+    body = re.sub(r'\A---\n.*?\n---\n', '', body, count=1, flags=re.S)
+    for line in body.splitlines():
         stripped = line.strip()
         if stripped.startswith('```') or stripped.startswith('~~~'):
             in_fence = not in_fence
