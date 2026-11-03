@@ -3,7 +3,6 @@
 <p align="center">
   <img src='https://img.shields.io/github/v/tag/sagaciouszu/eris-morn?label=version&color=blue' alt='Version'/>
   <img src='https://img.shields.io/badge/license-MIT-green' alt='License'/>
-  <img src='https://img.shields.io/badge/quotes-935%20verified-orange' alt='Quotes'/>
   <img src='https://img.shields.io/badge/tests-8%2F8%20passing-brightgreen' alt='Tests'/>
   <img src='https://img.shields.io/badge/Made%20with-Ahamkara%20Bones-9370DB' alt='Made with Ahamkara Bones'/>
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
