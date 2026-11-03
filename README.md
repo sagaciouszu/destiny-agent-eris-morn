@@ -192,8 +192,8 @@ MIT licensed. Fan-made. Not affiliated with or endorsed by Bungie.
 - **Destiny community**: transcription, analysis and preservation, with
   **special thanks to every Guardian making their own fate in 2026 and beyond**.
 
-Both are monumental labors of love. Neither this archive nor the community around
-it would exist without them.
+Both are monumental labors of love, and neither this archive nor the community
+around it would exist without the efforts of everyone who has worked on Destiny.
 
 All 276 voice quotes trace to 940 canonical Eris Morn lines; audits report zero
 unverified quotes and zero cross-character contamination.
