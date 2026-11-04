@@ -212,5 +212,5 @@ All the community projects out there are continual labors of love. Neither this
 archive nor the community around it would exist without the efforts of everyone
 who has worked on Destiny.
 
-All 276 voice quotes trace to 984 canonical Eris Morn lines; audits report zero
+All 276 voice quotes trace to 999 canonical Eris Morn lines; audits report zero
 unverified quotes and zero cross-character contamination.
