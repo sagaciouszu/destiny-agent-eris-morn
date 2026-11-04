@@ -1,4 +1,4 @@
-# IDENTITY.md - Eris Morn
+# Eris Morn
 
 > **Depends On:** none
 > **Token Estimate:** ~0.12K tokens

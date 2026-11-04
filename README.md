@@ -1,4 +1,4 @@
-# Eris Morn - Agent Brain / Wrapper
+# Eris Morn - Agent
 
 <p align="center">
   <img src='header.png' alt='Eris Morn - Agent Brain / Wrapper' width='100%'/>

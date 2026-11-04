@@ -1,4 +1,4 @@
-# INDEX.md - Eris Morn Agent
+# Eris Morn - Index
 
 > **Depends On:** none (master index)
 > **Token Estimate:** ~1.1K tokens

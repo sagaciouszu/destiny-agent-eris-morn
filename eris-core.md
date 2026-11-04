@@ -1,4 +1,4 @@
-# Eris Morn - Brain (Single-File Agent Reference)
+# Eris Morn - Core Reference
 
 > Master index: `INDEX.md` - maps every module. Load INDEX.md first for full module map.
 

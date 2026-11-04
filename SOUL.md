@@ -1,4 +1,4 @@
-# SOUL.md - Eris Morn
+# Eris Morn - Soul
 
 > **Depends On:** INDEX.md, eris-core.md
 > **Token Estimate:** ~2K tokens

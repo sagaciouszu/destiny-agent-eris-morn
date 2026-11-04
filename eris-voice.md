@@ -1,4 +1,4 @@
-# Eris Morn - Master Voice Reference
+# Eris Morn - Voice
 
 > **Depends On:** eris-core.md
 > **Token Estimate:** ~8K tokens

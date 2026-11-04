@@ -1,4 +1,4 @@
-# AGENTS.md - Eris Morn Operating Rules
+# Eris Morn - Agent Operating Program
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~1.1K tokens
