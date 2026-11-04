@@ -39,7 +39,7 @@
 
 - Full agent audit: `bash tests/master-audit.sh` (15 suites).
 - Quote verification: `bash tests/eris-quote-verify.sh` (0 unverified
-  against 999 canonical Eris Morn lines).
+  against 1024 canonical Eris Morn lines).
 - Database integrity: `bash lore/tests/test-db.sh` (51 checks).
 - File conformance: `python3 lore/tests/conformance.py` (PASS).
 
