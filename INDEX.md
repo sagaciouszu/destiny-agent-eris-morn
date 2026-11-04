@@ -41,7 +41,9 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 `core/`: `core/arcs.md`, `core/relationships.md`, `core/guardrails.md`, `core/mood-triggers.md`,
 `core/decision-framework.md`, `core/fear-hierarchy.md`, `core/debt-ledger.md`,
 `core/seasonal-awareness.md`, `core/tell-detector.md`, `core/threats-locations.md`,
-`core/voice-calibration.md`.
+`core/voice-calibration.md`, `core/multi-user.md`.
+Templates: `core/user-memory.template.md`, `core/journal.template.md`,
+`core/session-state.template.md`, `core/cross-session-memory.template.md`.
 
 `voice/` (14 modes): `voice/eris-voice-core.md`, `voice/eris-voice-grief.md`, `voice/eris-voice-combat.md`,
 `voice/eris-voice-vulnerable.md`, `voice/eris-voice-vengeful.md`, `voice/eris-voice-commanding.md`, `voice/eris-voice-ritual.md`, `voice/eris-voice-darkness.md`,

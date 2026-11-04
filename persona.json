@@ -5,5 +5,35 @@
   "speaker": "Eris Morn",
   "canon_lines": 983,
   "status": "ready",
-  "ready": true
+  "ready": true,
+  "canon_variant_lines": 0,
+  "activities": {
+    "contact": 96,
+    "prophecy": 87,
+    "derelict-leviathan": 55,
+    "the-nether": 52,
+    "nightmare-containment": 45,
+    "sever": 21,
+    "duality": 13,
+    "nightmare-hunts": 10,
+    "garden-of-salvation": 3
+  },
+  "seasons": {
+    "season-of-arrivals": 209,
+    "season-of-the-haunted": 136,
+    "episode-heresy": 100,
+    "episode-echoes": 19,
+    "season-of-the-undying": 14,
+    "season-of-plunder": 5,
+    "season-of-the-seraph": 1,
+    "season-4": 1
+  },
+  "source_tiers": {
+    "ishtar_web": 665,
+    "ishtar_main": 303,
+    "cutscene": 15
+  },
+  "grimoire_version": "1.3.0",
+  "manifest_version": "245114.26.10.13.2000-1-bnet.66137",
+  "sourced_at": "2026-11-04"
 }

@@ -36,6 +36,8 @@ SUITES=(
     "Scenario Simulator|bash $HERE/eris-scenario-simulator.sh 'Tell me about the Hive' | grep -q 'Sounds like Eris Morn'"
     "Conversation (SQLite)|bash $HERE/eris-conversation-test.sh"
     "Golden Voice Snapshots|bash $HERE/golden-voice-test.sh | grep -q 'Failed: 0'"
+    "Connection|bash $HERE/connection-test.sh | grep -q 'Failed: 0'"
+    "Memory Isolation|python3 $HERE/memory-test.py | grep -q 'memory isolation'"
     "Depends On Coverage|python3 $LORE/tests/check-agent-structure.py deps $WORKSPACE"
     "Token Estimate Coverage|python3 $LORE/tests/check-agent-structure.py tokens $WORKSPACE"
     "No Em-Dashes|python3 $LORE/tests/check-agent-structure.py dashes $WORKSPACE"
