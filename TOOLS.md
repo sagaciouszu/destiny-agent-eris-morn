@@ -17,7 +17,7 @@
 
 - Repository: `lore` (a symlink to or clone of `destiny-agent-grimoire`).
 - Database: `lore/db/grimoire.db` (SQLite with FTS5).
-- Query CLI: one of `python3 lore/db/query.py search|character|character-info|item|book|transcript|find-item|record|verify|verify-many|list|stats`; MCP tool names use underscores.
+- Query CLI: one of `python3 lore/db/query.py search|character|character-info|item|book|transcript|find-item|record|verify|verify-many|list|activity|event|coverage|stats`; MCP tool names use underscores.
 - Every command accepts `--json`; search returns snippets unless `--full`.
 - Direct SQL: `sqlite3 lore/db/grimoire.db "SELECT ..."`.
 - Quote safety: `python3 lore/db/query.py verify "<line>"` (exit 1 = not canon).
@@ -33,8 +33,8 @@
 
 - Full agent audit: `bash tests/master-audit.sh` (15 suites).
 - Quote verification: `bash tests/eris-quote-verify.sh` (0 unverified
-  against 940 canonical Eris Morn lines).
-- Database integrity: `bash lore/tests/test-db.sh` (38 checks).
+  against 984 canonical Eris Morn lines).
+- Database integrity: `bash lore/tests/test-db.sh` (50 checks).
 - File conformance: `python3 lore/tests/conformance.py` (PASS).
 
 ## Conventions

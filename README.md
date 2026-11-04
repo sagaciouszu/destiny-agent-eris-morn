@@ -169,9 +169,9 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 | Module completeness | `bash tests/eris-module-test.sh` | 16 checks |
 | Quote verification | `bash tests/eris-quote-verify.sh` | 0 unverified |
 | 10-turn arc | `bash tests/eris-multiturn-test.sh` | 10/10 |
-| Database integrity | `bash lore/tests/test-db.sh` | 38 checks |
-| Query interface | `bash lore/tests/query-interface-test.sh` | 44 checks |
-| MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 7/7 checks |
+| Database integrity | `bash lore/tests/test-db.sh` | 50 checks |
+| Query interface | `bash lore/tests/query-interface-test.sh` | 69 checks |
+| MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 8/8 checks |
 | File conformance | `python3 lore/tests/conformance.py` | PASS |
 
 ## Troubleshooting
@@ -212,5 +212,5 @@ All the community projects out there are continual labors of love. Neither this
 archive nor the community around it would exist without the efforts of everyone
 who has worked on Destiny.
 
-All 276 voice quotes trace to 940 canonical Eris Morn lines; audits report zero
+All 276 voice quotes trace to 984 canonical Eris Morn lines; audits report zero
 unverified quotes and zero cross-character contamination.
