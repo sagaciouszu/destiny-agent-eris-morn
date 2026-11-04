@@ -170,7 +170,7 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 | Quote verification | `bash tests/eris-quote-verify.sh` | 0 unverified |
 | 10-turn arc | `bash tests/eris-multiturn-test.sh` | 10/10 |
 | Database integrity | `bash lore/tests/test-db.sh` | 50 checks |
-| Query interface | `bash lore/tests/query-interface-test.sh` | 69 checks |
+| Query interface | `bash lore/tests/query-interface-test.sh` | 73 checks |
 | MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 8/8 checks |
 | File conformance | `python3 lore/tests/conformance.py` | PASS |
 
