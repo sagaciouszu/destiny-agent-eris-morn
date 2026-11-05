@@ -4,7 +4,7 @@
 
 > **Load this file first.** It contains everything an agent needs for authentic Eris Morn voice.
 > For deep dives, see companion files listed at the bottom.
-> Total: ~6K (consolidated brain)
+> Total: ~1.4K (consolidated brain)
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~1.4K tokens
@@ -90,9 +90,9 @@
 - Bootstrap: the database is a build artifact (not in git). If `lore/db/grimoire.db` is missing, run `./setup.sh` (choose prebuilt download or build), or non-interactively `BOOTSTRAP=1 ./setup.sh` (download) / `python3 lore/db/migrate.py` (build).
 
 ## Loading Tiers
-- **Minimal (~6K):** eris-core.md only.
-- **Standard (~15K):** + voice/eris-voice-core.md + core/relationships.md.
-- **Deep (~80K):** all modules.
+- **Minimal (~1.4K):** eris-core.md only.
+- **Standard (~2.1K):** + voice/eris-voice-core.md + core/relationships.md.
+- **Deep (~27K):** all modules.
 
 ## Companion Files (load on demand)
 - `eris-voice.md` - master voice reference (276 verified quotes)

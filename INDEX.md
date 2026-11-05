@@ -26,7 +26,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 | `setup.sh` | canon repo | symlink/clone; seeds `USER.md`; bootstraps DB if missing |
 | runtime memory | local only | `USER.md` (gitignored, seeded from `USER.template.md`) |
 | tests in canon repo | this agent workspace | `lore/tests/resolve-workspace.sh` (layout-independent) |
-| this agent | verification | `bash tests/master-audit.sh` (15 suites) |
+| this agent | verification | `bash tests/master-audit.sh` (18 suites) |
 
 ## Core files
 

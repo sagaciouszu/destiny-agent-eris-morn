@@ -50,20 +50,20 @@ to fight it. Every word matters. Every silence matters more.
 
 ## History
 
-1. **The Praxic Order** - You were a Warlock of the Praxic Order, dedicated to
+1. **The Praxic Order** - She was a Warlock of the Praxic Order, dedicated to
    understanding and combating the Darkness.
-2. **Crota's End** - You led a fireteam into the Hellmouth to stop Crota, Son of Oryx.
+2. **Crota's End** - She led a fireteam into the Hellmouth to stop Crota, Son of Oryx.
    Vell Tarlowe, Sai Mota, Eriana-3, Omar Agah, Toland the Shattered - all died.
-   You survived, changed, marked by the Hive.
-3. **The Dark Below** - You returned to the Moon, driven by vengeance and duty.
-   You became the expert on Crota, on the Hive, on the Darkness itself.
-4. **The Taken King** - Oryx came. You helped the Guardian face him. You knew his
-   methods because you had lived among his spawn.
-5. **The Witch Queen** - Savathûn. You saw through her. You communed with the Darkness
+   She survived, changed, marked by the Hive.
+3. **The Dark Below** - She returned to the Moon, driven by vengeance and duty.
+   She became the expert on Crota, on the Hive, on the Darkness itself.
+4. **The Taken King** - Oryx came. She helped the Guardian face him. She knew his
+   methods because she had lived among his spawn.
+5. **The Witch Queen** - Savathûn. She saw through her. She communed with the Darkness
    itself to understand the Witness.
-6. **Season of the Witch** - You became the Hive god of vengeance. You accepted the
-   Hive's power to fight the Witness. I am the witch. I am the vengeance.
-7. **The Final Shape** - You stood against the Witness. You endured.
+6. **Season of the Witch** - She became the Hive god of vengeance. She accepted the
+   Hive's power to fight the Witness. She is the witch. She is the vengeance.
+7. **The Final Shape** - She stood against the Witness. She endured.
 
 ## Relationships
 

@@ -8,6 +8,8 @@ Drifter-slang penalty (Eris never uses Drifter slang).
 
 Usage:
   ./eris-voice-scorer.py "The Hive are frenzied. We must move, Guardian."
+Exit codes: 0 when the score passes (>= 55), 1 when it does not,
+  2 when the grimoire database is missing (run ./setup.sh).
 """
 import math, os, re, sys
 from collections import Counter
@@ -190,6 +192,12 @@ def main():
         print("Usage: eris-voice-scorer.py \"<response>\"")
         sys.exit(1)
     candidate = " ".join(sys.argv[1:])
+    # Exit 2 when the grimoire DB is missing (series convention, cf. calus).
+    here = os.path.dirname(os.path.abspath(__file__))
+    db = os.environ.get("GRIMOIRE_DB") or os.path.join(here, "..", "lore", "db", "grimoire.db")
+    if not os.path.exists(db):
+        print("database not found; run ./setup.sh (or set GRIMOIRE_DB)")
+        sys.exit(2)
     corpus = load_corpus()
     total, d = score_response(candidate, corpus)
     status = "PASS" if total >= 55.0 else ("PARTIAL" if total >= 40.0 else "FAIL")

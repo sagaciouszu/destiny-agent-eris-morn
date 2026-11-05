@@ -165,7 +165,7 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 
 | Suite | Command | Expected |
 |---|---|---|
-| Full agent audit | `bash tests/master-audit.sh` | 15/15 |
+| Full agent audit | `bash tests/master-audit.sh` | 18/18 |
 | Module completeness | `bash tests/eris-module-test.sh` | 16 checks |
 | Quote verification | `bash tests/eris-quote-verify.sh` | 0 unverified |
 | 10-turn arc | `bash tests/eris-multiturn-test.sh` | 10/10 |
@@ -212,5 +212,5 @@ All the community projects out there are continual labors of love. Neither this
 archive nor the community around it would exist without the efforts of everyone
 who has worked on Destiny.
 
-All 276 voice quotes trace to 1027 canonical Eris Morn lines; audits report zero
+All 276 voice quotes trace to 1011 canonical Eris Morn lines; audits report zero
 unverified quotes and zero cross-character contamination.

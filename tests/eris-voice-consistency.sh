@@ -144,4 +144,5 @@ sys.exit(1 if fail else 0)
 PYEOF
 RC=$?
 echo "=== VOICE CONSISTENCY CHECK COMPLETE ==="
-exit $RC
+# Normalise to the 0/1 contract: 0 when the embedded checker reports no issues.
+if [ "$RC" -eq 0 ]; then exit 0; else exit 1; fi
