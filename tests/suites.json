@@ -1,0 +1,92 @@
+{
+  "agent": "eris-morn",
+  "source": "tests/master-audit.sh",
+  "count": 17,
+  "suites": [
+    {
+      "name": "Module Completeness (16 checks)",
+      "command": "bash $HERE/eris-module-test.sh | grep -q 'Failed: 0'",
+      "tier": "core"
+    },
+    {
+      "name": "Quote Verification (0 unverified)",
+      "command": "bash $HERE/eris-quote-verify.sh | grep -q 'PASS: All quotes verified'",
+      "tier": "core"
+    },
+    {
+      "name": "Voice Validator",
+      "command": "bash $HERE/eris-validate-response.sh 'I am Eris Morn. The Darkness changes its environment as the Traveler did. Guardian, you are not alone.' | grep -q 'PASS: Sounds like Eris Morn'",
+      "tier": "core"
+    },
+    {
+      "name": "Voice Consistency",
+      "command": "bash $HERE/eris-voice-consistency.sh | grep -q 'VOICE CONSISTENCY CHECK COMPLETE'",
+      "tier": "core"
+    },
+    {
+      "name": "10-Turn Emotional Arc",
+      "command": "bash $HERE/eris-multiturn-test.sh | grep -q '10/10'",
+      "tier": "core"
+    },
+    {
+      "name": "Voice Scorer",
+      "command": "python3 $HERE/eris-voice-scorer.py 'I am Eris Morn. The Hive are a doctrine made flesh, Guardian.' >/dev/null",
+      "tier": "core"
+    },
+    {
+      "name": "Voice Scorer Negative",
+      "command": "! python3 $HERE/eris-voice-scorer.py 'Heh. Nah, kid. Yeah, we gonna bank those motes, brother.' >/dev/null 2>&1",
+      "tier": "persona"
+    },
+    {
+      "name": "Scenario Simulator",
+      "command": "bash $HERE/eris-scenario-simulator.sh 'Tell me about the Hive' | grep -q 'Sounds like Eris Morn'",
+      "tier": "core"
+    },
+    {
+      "name": "Conversation (SQLite)",
+      "command": "bash $HERE/eris-conversation-test.sh",
+      "tier": "core"
+    },
+    {
+      "name": "Golden Voice Snapshots",
+      "command": "bash $HERE/golden-voice-test.sh | grep -q 'Failed: 0'",
+      "tier": "core"
+    },
+    {
+      "name": "Connection",
+      "command": "bash $HERE/connection-test.sh | grep -q 'Failed: 0'",
+      "tier": "core"
+    },
+    {
+      "name": "Memory Isolation",
+      "command": "python3 $HERE/memory-test.py | grep -q 'memory isolation'",
+      "tier": "core"
+    },
+    {
+      "name": "Depends On Coverage",
+      "command": "python3 $LORE/tests/check-agent-structure.py deps $WORKSPACE",
+      "tier": "core"
+    },
+    {
+      "name": "Token Estimate Coverage",
+      "command": "python3 $LORE/tests/check-agent-structure.py tokens $WORKSPACE",
+      "tier": "core"
+    },
+    {
+      "name": "No Em-Dashes",
+      "command": "python3 $LORE/tests/check-agent-structure.py dashes $WORKSPACE",
+      "tier": "core"
+    },
+    {
+      "name": "INDEX Completeness",
+      "command": "python3 $LORE/tests/check-agent-structure.py index $WORKSPACE",
+      "tier": "core"
+    },
+    {
+      "name": "No Personal Paths",
+      "command": "python3 $LORE/tests/check-agent-structure.py paths $WORKSPACE",
+      "tier": "core"
+    }
+  ]
+}
