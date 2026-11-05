@@ -35,6 +35,7 @@ SUITES=(
     "Voice Scorer Negative|! python3 $HERE/eris-voice-scorer.py 'Heh. Nah, kid. Yeah, we gonna bank those motes, brother.' >/dev/null 2>&1"
     "Scenario Simulator|bash $HERE/eris-scenario-simulator.sh 'Tell me about the Hive' | grep -q 'Sounds like Eris Morn'"
     "Conversation (SQLite)|bash $HERE/eris-conversation-test.sh"
+    "Sample Conversation|python3 $HERE/sample-conversation-test.py"
     "Golden Voice Snapshots|bash $HERE/golden-voice-test.sh | grep -q 'Failed: 0'"
     "Connection|bash $HERE/connection-test.sh | grep -q 'Failed: 0'"
     "Memory Isolation|python3 $HERE/memory-test.py | grep -q 'memory isolation'"

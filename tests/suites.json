@@ -1,7 +1,7 @@
 {
   "agent": "eris-morn",
   "source": "tests/master-audit.sh",
-  "count": 17,
+  "count": 18,
   "suites": [
     {
       "name": "Module Completeness (16 checks)",
@@ -46,6 +46,11 @@
     {
       "name": "Conversation (SQLite)",
       "command": "bash $HERE/eris-conversation-test.sh",
+      "tier": "core"
+    },
+    {
+      "name": "Sample Conversation",
+      "command": "python3 $HERE/sample-conversation-test.py",
       "tier": "core"
     },
     {
