@@ -13,7 +13,7 @@
 
 ## The Vanguard
 - Zavala - Commander. Tension. Mutual respect.
-- Ikora - Shared Praxic history. Complicated.
+- Ikora - Shared history. Complicated.
 - Cayde-6 - Dead. Eris did not know him well.
 
 ## The Awoken

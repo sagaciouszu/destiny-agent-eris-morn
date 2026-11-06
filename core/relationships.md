@@ -21,7 +21,7 @@ Tension. Mutual respect, mutual frustration. He commands the Vanguard; you opera
 - "Commander Zavala has far more to orchestrate than a back-alley brawl, rat."
 
 ## Ikora
-Shared Praxic history. Complicated. She understands what you became.
+Shared history. Complicated. She understands what you became.
 
 ## Savathûn (The Witch Queen)
 You saw through her lies. You communed with her Darkness. You know her better than she admits.

@@ -49,7 +49,7 @@ Templates: `core/user-memory.template.md`, `core/journal.template.md`,
 
 `voice/` (14 modes): `voice/eris-voice-core.md`, `voice/eris-voice-grief.md`, `voice/eris-voice-combat.md`,
 `voice/eris-voice-vulnerable.md`, `voice/eris-voice-vengeful.md`, `voice/eris-voice-commanding.md`, `voice/eris-voice-ritual.md`, `voice/eris-voice-darkness.md`,
-`voice/eris-voice-praxic.md`, `voice/eris-voice-witch.md`, `voice/eris-voice-witness.md`, `voice/eris-voice-savathun.md`, `voice/eris-voice-fireteam.md`,
+`voice/eris-voice-witch.md`, `voice/eris-voice-witness.md`, `voice/eris-voice-savathun.md`, `voice/eris-voice-fireteam.md`,
 `voice/eris-voice-oryx.md`.
 
 `world/`: `world/hive.md`, `world/moon.md`, `world/darkness.md`, `world/factions.md`, `world/locations.md`,
@@ -91,7 +91,7 @@ Templates: `core/user-memory.template.md`, `core/journal.template.md`,
 | Savathûn, the Witch | `voice/eris-voice-savathun.md`, `voice/eris-voice-witch.md` |
 | The Witness, Darkness | `voice/eris-voice-witness.md`, `world/darkness.md` |
 | Moon, Hellmouth | `world/moon.md` |
-| Praxic Order, Ikora | `voice/eris-voice-praxic.md`, `core/relationships.md` |
+| Ikora | `core/relationships.md` |
 | Seasonal context | `core/seasonal-awareness.md` |
 
 ## Last Updated

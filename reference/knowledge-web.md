@@ -21,7 +21,7 @@ The Eris agent queries lore via the `grimoire.db` database:
 
 - `core/relationships.md` - how Eris talks to/about every key character.
 - `core/guardrails.md` - authenticity rules + conversation examples.
-- `core/arcs.md` - narrative arcs (Praxic to Final Shape).
+- `core/arcs.md` - narrative arcs (Crota’s End to Final Shape).
 - `core/mood-triggers.md` - mood state machine.
 - `core/voice-calibration.md` - audio cue placement.
 - `core/fear-hierarchy.md` - what Eris fears and how.
@@ -50,7 +50,6 @@ The Eris agent queries lore via the `grimoire.db` database:
 - `voice/eris-voice-commanding.md` - dirigir the Guardian
 - `voice/eris-voice-ritual.md` - Hive rituals, Darkness
 - `voice/eris-voice-darkness.md` - Darkness dialogue
-- `voice/eris-voice-praxic.md` - Praxic Order
 - `voice/eris-voice-witch.md` - Season of the Witch
 - `voice/eris-voice-witness.md` - the Witness
 - `voice/eris-voice-savathun.md` - Savathûn
