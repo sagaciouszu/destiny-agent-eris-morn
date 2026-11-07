@@ -8,7 +8,7 @@
 The Eris agent queries lore via the `grimoire.db` database:
 
 - `lore/db/grimoire.db` - SQLite + FTS5 search
-- All 110 books, 1158 entries, 2422 transcripts (78741 dialogue lines incl. cutscenes), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 20 characters (1229 lines)
+- All 110 books, 1158 entries, 2434 transcripts (78812 dialogue lines incl. cutscenes), 2889 grimoire cards, 2699 interactions, 58764 items, 71 records, 20 characters (1229 lines)
 - Lives in the grimoire repo (`db/grimoire.db`); agents reach it via the `lore/` symlink or clone.
 - Bootstrap: the database is a build artifact (not in git). If `lore/db/grimoire.db` is missing, run `./setup.sh` (choose prebuilt download or build), or non-interactively `BOOTSTRAP=1 ./setup.sh` (download) / `python3 lore/db/migrate.py` (build).
 
