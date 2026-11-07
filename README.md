@@ -14,7 +14,7 @@
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
 
-**Version:** 0.13.1 | **Last push:** 2026-11-06 | **Status:** Active
+**Version:** 0.13.1 | **Last push:** 2026-11-07 | **Status:** Active
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~2.1K tokens
@@ -212,5 +212,5 @@ All the community projects out there are continual labors of love. Neither this
 archive nor the community around it would exist without the efforts of everyone
 who has worked on Destiny.
 
-All 276 voice quotes trace to 1013 canonical Eris Morn lines; audits report zero
+All 276 voice quotes trace to 1011 canonical Eris Morn lines; audits report zero
 unverified quotes and zero cross-character contamination.
