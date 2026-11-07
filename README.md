@@ -9,7 +9,7 @@
   <a href='https://github.com/sagaciouszu/eris-morn/actions/workflows/ci.yml'><img src='https://github.com/sagaciouszu/eris-morn/actions/workflows/ci.yml/badge.svg' alt='CI'/></a>
   <img src='https://img.shields.io/github/last-commit/sagaciouszu/eris-morn?label=last%20push&color=blue' alt='Last push'/>
   <img src='https://img.shields.io/badge/license-MIT-green' alt='License'/>
-  <img src='https://img.shields.io/badge/tests-13%2F13%20passing-brightgreen' alt='Tests'/>
+  <img src='https://img.shields.io/badge/tests-18%2F18%20passing-brightgreen' alt='Tests'/>
   <img src='https://img.shields.io/badge/Made%20with-Ahamkara%20Bones-9370DB' alt='Made with Ahamkara Bones'/>
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
