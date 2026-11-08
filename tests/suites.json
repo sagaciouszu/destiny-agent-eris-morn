@@ -1,5 +1,5 @@
 {
-  "agent": "eris-morn",
+  "agent": "destiny-agent-eris-morn",
   "source": "tests/master-audit.sh",
   "count": 18,
   "suites": [

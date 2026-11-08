@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <img src='https://img.shields.io/github/v/release/sagaciouszu/eris-morn?label=version&color=blue' alt='Version'/>
-  <a href='https://github.com/sagaciouszu/eris-morn/actions/workflows/ci.yml'><img src='https://github.com/sagaciouszu/eris-morn/actions/workflows/ci.yml/badge.svg' alt='CI'/></a>
-  <img src='https://img.shields.io/github/last-commit/sagaciouszu/eris-morn?label=last%20push&color=blue' alt='Last push'/>
+  <img src='https://img.shields.io/github/v/release/sagaciouszu/destiny-agent-eris-morn?label=version&color=blue' alt='Version'/>
+  <a href='https://github.com/sagaciouszu/destiny-agent-eris-morn/actions/workflows/ci.yml'><img src='https://github.com/sagaciouszu/destiny-agent-eris-morn/actions/workflows/ci.yml/badge.svg' alt='CI'/></a>
+  <img src='https://img.shields.io/github/last-commit/sagaciouszu/destiny-agent-eris-morn?label=last%20push&color=blue' alt='Last push'/>
   <img src='https://img.shields.io/badge/license-MIT-green' alt='License'/>
   <img src='https://img.shields.io/badge/tests-18%2F18%20passing-brightgreen' alt='Tests'/>
   <img src='https://img.shields.io/badge/Made%20with-Ahamkara%20Bones-9370DB' alt='Made with Ahamkara Bones'/>
@@ -28,8 +28,8 @@ database. Every quote traces to canon; every suite is verifiable.
 **Step 1: clone.**
 
 ```bash
-git clone https://github.com/sagaciouszu/eris-morn.git
-cd eris-morn
+git clone https://github.com/sagaciouszu/destiny-agent-eris-morn.git
+cd destiny-agent-eris-morn
 ```
 
 **Step 2: bootstrap. Run exactly one of these, not several.**
