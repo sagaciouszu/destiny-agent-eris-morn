@@ -106,4 +106,4 @@ stays with its owner.
 | `setup.sh` | canon repo | symlink or clone; bootstraps DB if missing |
 | `USER.md` | local only | gitignored runtime state |
 | tests in canon repo | this workspace | `lore/tests/resolve-workspace.sh` |
-| this agent | verification | `bash tests/master-audit.sh` (18 suites) |
+| this agent | verification | `bash tests/master-audit.sh` (20 suites) |
