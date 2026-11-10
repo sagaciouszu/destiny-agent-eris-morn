@@ -67,3 +67,20 @@ The Eris agent queries lore via the `grimoire.db` database:
 - `lore/db/grimoire.db` - query via `python3 lore/db/query.py <command>`
 - **Quote check:** `python3 lore/db/query.py verify "<line>"` (exit 1 = not canon)
 - Markdown source: `lore/source/` (unused at runtime; only for regeneration).
+
+<!-- knowledge-web:begin -->
+## Canon snapshot (generated)
+
+> Generated from `db/grimoire.db` by `scripts/generate-knowledge-web.py`.
+> Do not hand-edit this block; run the script with `--apply`.
+
+| Measure | Value |
+|---|---|
+| Canonical lines | 1011 |
+| Transcripts | 128 |
+| Activities | contact (96), prophecy (87), derelict-leviathan (55), the-nether (52), nightmare-containment (45) |
+| Seasons | season-of-arrivals (433), season-of-the-haunted (144), episode-heresy (103), season-of-the-witch (56), monument-of-triumph (25) |
+| Story chapters | the_nightmares_return (505), the_witch_queen (151), the_final_shape (116), the_taken_war (71), the_lightfall (56) |
+| Source tiers | ishtar_web (665), ishtar_main (303), youtube_captions (28), cutscene (15) |
+| Frequent co-speakers | Drifter (1002), Ghost (262), Zavala (169), Ikora (126), Sloane (114), Immaru (90) |
+<!-- knowledge-web:end -->
