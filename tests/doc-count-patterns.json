@@ -1,0 +1,16 @@
+{
+ "patterns": [
+  {
+   "regex": "\\\\b\\\\d{3,4} canonical Eris",
+   "replacement": "{speaker_exact} canonical Eris"
+  },
+  {
+   "regex": "\\\\(\\\\d{3,4} Eris Morn lines\\\\)",
+   "replacement": "({speaker_exact} Eris Morn lines)"
+  },
+  {
+   "regex": "\\\\(\\\\d{3,4} canonical Eris transcript lines\\\\)",
+   "replacement": "({speaker_exact} canonical Eris transcript lines)"
+  }
+ ]
+}
