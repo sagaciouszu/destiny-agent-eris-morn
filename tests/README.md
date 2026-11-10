@@ -9,7 +9,7 @@ Run the full gate first:
 bash tests/master-audit.sh
 ```
 
-`tests/suites.json` records the 20 suites the audit runs, one entry per suite
+`tests/suites.json` records the 22 suites the audit runs, one entry per suite
 with its command and tier.
 
 | Test | Purpose |
@@ -34,7 +34,7 @@ with its command and tier.
 ## Running
 
 ```bash
-bash tests/master-audit.sh   # full gate: 20 suites plus the shared grimoire gates
+bash tests/master-audit.sh   # full gate: 22 suites plus the shared grimoire gates
 bash tests/run-suites.sh     # suites.json entries only (additive)
 ```
 

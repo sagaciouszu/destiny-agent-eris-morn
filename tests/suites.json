@@ -1,7 +1,7 @@
 {
   "agent": "destiny-agent-eris-morn",
   "source": "tests/master-audit.sh",
-  "count": 20,
+  "count": 22,
   "suites": [
     {
       "name": "Module Completeness (16 checks)",
@@ -76,6 +76,16 @@
     {
       "name": "Memory Isolation",
       "command": "python3 $HERE/memory-test.py | grep -q 'memory isolation'",
+      "tier": "core"
+    },
+    {
+      "name": "Multi-User Isolation",
+      "command": "grep -q 'Never quote or summarize one user' $WORKSPACE/core/multi-user.md && grep -q 'memory.py' $WORKSPACE/core/multi-user.md",
+      "tier": "core"
+    },
+    {
+      "name": "Persona Freshness",
+      "command": "python3 $HERE/persona-freshness.py",
       "tier": "core"
     },
     {

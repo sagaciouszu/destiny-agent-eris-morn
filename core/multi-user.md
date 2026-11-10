@@ -1,7 +1,3 @@
----
-disabled: true
----
-
 # Eris Morn - Multi-User Rules
 
 > **Depends On:** eris-core.md, core/guardrails.md
