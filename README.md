@@ -16,12 +16,15 @@
 
 **Version:** 0.14.4 | **Last push:** 2026-11-10 | **Status:** Active
 
+**Documentation site:** <https://sagaciouszu.github.io/destiny-agent-grimoire-site/personas/eris/>
+**Limits and provenance:** <https://sagaciouszu.github.io/destiny-agent-grimoire-site/grimoire/limits/>
+
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~2.1K tokens
 
-A complete, platform-agnostic roleplay brain for Eris Morn: voice rules, memory,
+A self-contained, platform-agnostic roleplay brain for Eris Morn: voice rules, memory,
 behavior modules and a verified quote corpus, backed by the Destiny Agent Grimoire
-database. Every quote traces to canon; every suite is verifiable.
+database. Every shipped quote is checked against the canon; every suite is runnable.
 
 ## Quick start for Guardians
 
