@@ -170,7 +170,7 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 | Module completeness | `bash tests/eris-module-test.sh` | 16 checks |
 | Quote verification | `bash tests/eris-quote-verify.sh` | 0 unverified |
 | 10-turn arc | `bash tests/eris-multiturn-test.sh` | 10/10 |
-| Database integrity | `bash lore/tests/test-db.sh` | 61 checks |
+| Database integrity | `bash lore/tests/test-db.sh` | 65 checks |
 | Suite manifest | `python3 tests/suite-manifest-test.py` | manifest matches audit |
 | Shared helpers | `bash tests/shared-helpers-test.sh` | Passed: every helper matches |
 | Query interface | `bash lore/tests/query-interface-test.sh` | 89 checks |
