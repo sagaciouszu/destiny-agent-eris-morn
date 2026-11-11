@@ -7,7 +7,7 @@ similarity, sentence-length distribution, formal-marker density, and a
 Drifter-slang penalty (Eris never uses Drifter slang).
 
 Usage:
-  ./eris-voice-scorer.py "The Hive are frenzied. We must move, Guardian."
+  ./voice-scorer.py "The Hive are frenzied. We must move, Guardian."
 Exit codes: 0 when the score passes (>= 55), 1 when it does not,
   2 when the grimoire database is missing (run ./setup.sh).
 """
@@ -189,7 +189,7 @@ def score_response(candidate, corpus_lines):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: eris-voice-scorer.py \"<response>\"")
+        print("Usage: voice-scorer.py \"<response>\"")
         sys.exit(1)
     candidate = " ".join(sys.argv[1:])
     # Exit 2 when the grimoire DB is missing (series convention, cf. calus).

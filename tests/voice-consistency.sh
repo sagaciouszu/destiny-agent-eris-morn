@@ -3,7 +3,7 @@
 # Scans quoted strings in Eris agent files for Drifter-speech contamination
 # and non-Eris patterns. Canon-verified quotes are exempt (canon is canon:
 # e.g. Eris's single [laughs] in the Prophecy transcript).
-# Usage: ./eris-voice-consistency.sh
+# Usage: ./voice-consistency.sh
 
 WORKSPACE="${WORKSPACE:-$(bash "$(dirname "$0")/../lore/tests/resolve-workspace.sh" "$0" eris)}"
 DB="${DB:-$WORKSPACE/lore/db/grimoire.db}"

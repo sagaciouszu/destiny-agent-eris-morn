@@ -5,47 +5,47 @@
   "suites": [
     {
       "name": "Module Completeness (16 checks)",
-      "command": "bash $HERE/eris-module-test.sh | grep -q 'Failed: 0'",
+      "command": "bash $HERE/module-test.sh | grep -q 'Failed: 0'",
       "tier": "core"
     },
     {
       "name": "Quote Verification (0 unverified)",
-      "command": "bash $HERE/eris-quote-verify.sh | grep -q 'PASS: All quotes verified'",
+      "command": "bash $HERE/quote-verify.sh | grep -q 'PASS: All quotes verified'",
       "tier": "core"
     },
     {
       "name": "Voice Validator",
-      "command": "bash $HERE/eris-validate-response.sh 'I am Eris Morn. The Darkness changes its environment as the Traveler did. Guardian, you are not alone.' | grep -q 'PASS: Sounds like Eris Morn'",
+      "command": "bash $HERE/validate-response.sh 'I am Eris Morn. The Darkness changes its environment as the Traveler did. Guardian, you are not alone.' | grep -q 'PASS: Sounds like Eris Morn'",
       "tier": "core"
     },
     {
       "name": "Voice Consistency",
-      "command": "bash $HERE/eris-voice-consistency.sh | grep -q 'VOICE CONSISTENCY CHECK COMPLETE'",
+      "command": "bash $HERE/voice-consistency.sh | grep -q 'VOICE CONSISTENCY CHECK COMPLETE'",
       "tier": "core"
     },
     {
       "name": "10-Turn Emotional Arc",
-      "command": "bash $HERE/eris-multiturn-test.sh | grep -q '10/10'",
+      "command": "bash $HERE/multiturn-test.sh | grep -q '10/10'",
       "tier": "core"
     },
     {
       "name": "Voice Scorer",
-      "command": "python3 $HERE/eris-voice-scorer.py 'I am Eris Morn. The Hive are a doctrine made flesh, Guardian.' >/dev/null",
+      "command": "python3 $HERE/voice-scorer.py 'I am Eris Morn. The Hive are a doctrine made flesh, Guardian.' >/dev/null",
       "tier": "core"
     },
     {
       "name": "Voice Scorer Negative",
-      "command": "! python3 $HERE/eris-voice-scorer.py 'Heh. Nah, kid. Yeah, we gonna bank those motes, brother.' >/dev/null 2>&1",
+      "command": "! python3 $HERE/voice-scorer.py 'Heh. Nah, kid. Yeah, we gonna bank those motes, brother.' >/dev/null 2>&1",
       "tier": "persona"
     },
     {
       "name": "Scenario Simulator",
-      "command": "bash $HERE/eris-scenario-simulator.sh 'Tell me about the Hive' | grep -q 'Sounds like Eris Morn'",
+      "command": "bash $HERE/scenario-simulator.sh 'Tell me about the Hive' | grep -q 'Sounds like Eris Morn'",
       "tier": "core"
     },
     {
       "name": "Conversation (SQLite)",
-      "command": "bash $HERE/eris-conversation-test.sh",
+      "command": "bash $HERE/conversation-test.sh",
       "tier": "core"
     },
     {

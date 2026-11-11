@@ -76,9 +76,9 @@ Templates: `core/user-memory.template.md`, `core/journal.template.md`,
 - MCP (optional): `lore/mcp-server/run.sh`; install `./setup.sh --mcp`; details in
   `lore/mcp-server/README.md`.
 - Commands: `bash tests/master-audit.sh` (all suites),
-  `bash tests/eris-quote-verify.sh` (0 unverified),
-  `python3 tests/eris-voice-scorer.py "<line>"` (voice score),
-  `bash tests/eris-multiturn-test.sh` (10-turn arc).
+  `bash tests/quote-verify.sh` (0 unverified),
+  `python3 tests/voice-scorer.py "<line>"` (voice score),
+  `bash tests/multiturn-test.sh` (10-turn arc).
 
 ## Topic map
 

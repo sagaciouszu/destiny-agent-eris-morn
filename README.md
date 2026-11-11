@@ -171,9 +171,9 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 | Suite | Command | Expected |
 |---|---|---|
 | Full agent audit | `bash tests/master-audit.sh` | 22/22 |
-| Module completeness | `bash tests/eris-module-test.sh` | 16 checks |
-| Quote verification | `bash tests/eris-quote-verify.sh` | 0 unverified |
-| 10-turn arc | `bash tests/eris-multiturn-test.sh` | 10/10 |
+| Module completeness | `bash tests/module-test.sh` | 16 checks |
+| Quote verification | `bash tests/quote-verify.sh` | 0 unverified |
+| 10-turn arc | `bash tests/multiturn-test.sh` | 10/10 |
 | Database integrity | `bash lore/tests/test-db.sh` | 67 checks |
 | Suite manifest | `python3 tests/suite-manifest-test.py` | manifest matches audit |
 | Shared helpers | `bash tests/shared-helpers-test.sh` | Passed: every helper matches |

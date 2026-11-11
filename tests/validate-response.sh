@@ -1,7 +1,7 @@
 #!/bin/bash
 # Eris Response Validator
 # Checks if a response sounds authentically like Eris Morn.
-# Usage: ./tests/eris-validate-response.sh "response text"
+# Usage: ./tests/validate-response.sh "response text"
 
 RESPONSE="$1"
 if [ -z "$RESPONSE" ]; then

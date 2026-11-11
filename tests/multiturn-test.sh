@@ -13,8 +13,8 @@
 #   Turn 10: CALLBACK + MEMORY PERSISTENCE (Turn 1 class + Turn 4 fireteam)
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
-SCORER="$HERE/eris-voice-scorer.py"
-VALIDATOR="$HERE/eris-validate-response.sh"
+SCORER="$HERE/voice-scorer.py"
+VALIDATOR="$HERE/validate-response.sh"
 
 echo "=== ERIS 10-TURN CONVERSATION ARC TEST ==="
 echo ""

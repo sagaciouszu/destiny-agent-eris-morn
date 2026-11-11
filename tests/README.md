@@ -16,14 +16,14 @@ with its command and tier.
 |---|---|
 | `master-audit.sh` | every Eris-specific suite plus the shared grimoire gates |
 | `run-suites.sh` | runs `suites.json` entries through `lore/tests/run-suite-manifest.py` |
-| `eris-module-test.sh` | required files, headers, em-dashes, personal paths (16 checks) |
-| `eris-quote-verify.sh` | every quoted string is canon (0 unverified) |
-| `eris-validate-response.sh` | voice validator for one response |
-| `eris-voice-consistency.sh` | Drifter-speech contamination and cross-character attribution |
-| `eris-voice-scorer.py` | statistical voice score for one response |
-| `eris-multiturn-test.sh` | 10-turn emotional arc (10/10) |
-| `eris-scenario-simulator.sh` | scenario response (sounds like Eris Morn) |
-| `eris-conversation-test.sh` | SQLite conversation flow |
+| `module-test.sh` | required files, headers, em-dashes, personal paths (16 checks) |
+| `quote-verify.sh` | every quoted string is canon (0 unverified) |
+| `validate-response.sh` | voice validator for one response |
+| `voice-consistency.sh` | Drifter-speech contamination and cross-character attribution |
+| `voice-scorer.py` | statistical voice score for one response |
+| `multiturn-test.sh` | 10-turn emotional arc (10/10) |
+| `scenario-simulator.sh` | scenario response (sounds like Eris Morn) |
+| `conversation-test.sh` | SQLite conversation flow |
 | `sample-conversation-test.py` | recorded sample conversation |
 | `golden-voice-test.sh` | locked voice snapshots from `golden-voice.json` |
 | `connection-test.sh` | grimoire database, query interface, lore/seal, MCP |
@@ -50,7 +50,7 @@ bash tests/run-suites.sh     # suites.json entries only (additive)
 
 - 0 = pass, 1 = fail for every test script and for `master-audit.sh`.
 - Voice scorers exit 2 when the grimoire database is missing
-  (`./eris-voice-scorer.py` prints `database not found`); they exit 1 on a
+  (`./voice-scorer.py` prints `database not found`); they exit 1 on a
   failing score and 0 on a passing one.
 - Suites that wrap another script judge it by an output line (`Failed: 0`,
   `PASS: All quotes verified`) rather than by the wrapped script's exit status.
@@ -73,8 +73,8 @@ bash tests/run-suites.sh     # suites.json entries only (additive)
   the tool's exit code into a verdict (0 = pass, non-zero = fail) and compares
   it with the expectation, so a verdict flip fails the suite even when both runs
   exit non-zero or both exit 0.
-- **Forbidden and consistency checks:** `eris-voice-consistency.sh` flags
+- **Forbidden and consistency checks:** `voice-consistency.sh` flags
   Drifter speech patterns, laughter outside canon and quotes that belong to
   another speaker in the database (canon-verified quotes are exempt);
-  `eris-validate-response.sh` rejects Drifter slang, laughter and responses
+  `validate-response.sh` rejects Drifter slang, laughter and responses
   outside the short-sentence length range.

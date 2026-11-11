@@ -1,10 +1,10 @@
 #!/bin/bash
 # Eris Scenario Simulator (expanded)
 # Feeds a Guardian input and outputs an Eris-voice response.
-# Usage: ./eris-scenario-simulator.sh "your question here"
+# Usage: ./scenario-simulator.sh "your question here"
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
-VALIDATOR="$HERE/eris-validate-response.sh"
+VALIDATOR="$HERE/validate-response.sh"
 
 INPUT="$*"
 if [ -z "$INPUT" ]; then
