@@ -30,7 +30,7 @@
     },
     {
       "name": "Voice Scorer",
-      "command": "python3 $HERE/voice-scorer.py 'I am Eris Morn. The Hive are a doctrine made flesh, Guardian.' >/dev/null",
+      "command": "python3 $HERE/voice-scorer.py 'I am Eris Morn. The Hive serve their gods with flesh and bone, Guardian.' >/dev/null",
       "tier": "core"
     },
     {

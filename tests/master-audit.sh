@@ -31,7 +31,7 @@ SUITES=(
     "Voice Validator|bash $HERE/validate-response.sh 'I am Eris Morn. The Darkness changes its environment as the Traveler did. Guardian, you are not alone.' | grep -q 'PASS: Sounds like Eris Morn'"
     "Voice Consistency|bash $HERE/voice-consistency.sh | grep -q 'VOICE CONSISTENCY CHECK COMPLETE'"
     "10-Turn Emotional Arc|bash $HERE/multiturn-test.sh | grep -q '10/10'"
-    "Voice Scorer|python3 $HERE/voice-scorer.py 'I am Eris Morn. The Hive are a doctrine made flesh, Guardian.' >/dev/null"
+    "Voice Scorer|python3 $HERE/voice-scorer.py 'I am Eris Morn. The Hive serve their gods with flesh and bone, Guardian.' >/dev/null"
     "Voice Scorer Negative|! python3 $HERE/voice-scorer.py 'Heh. Nah, kid. Yeah, we gonna bank those motes, brother.' >/dev/null 2>&1"
     "Scenario Simulator|bash $HERE/scenario-simulator.sh 'Tell me about the Hive' | grep -q 'Sounds like Eris Morn'"
     "Conversation (SQLite)|bash $HERE/conversation-test.sh"
