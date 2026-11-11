@@ -170,7 +170,7 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 
 | Suite | Command | Expected |
 |---|---|---|
-| Full agent audit | `bash tests/master-audit.sh` | 20/20 |
+| Full agent audit | `bash tests/master-audit.sh` | 22/22 |
 | Module completeness | `bash tests/eris-module-test.sh` | 16 checks |
 | Quote verification | `bash tests/eris-quote-verify.sh` | 0 unverified |
 | 10-turn arc | `bash tests/eris-multiturn-test.sh` | 10/10 |
