@@ -174,11 +174,11 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 | Module completeness | `bash tests/module-test.sh` | 16 checks |
 | Quote verification | `bash tests/quote-verify.sh` | 0 unverified |
 | 10-turn arc | `bash tests/multiturn-test.sh` | 10/10 |
-| Database integrity | `bash lore/tests/test-db.sh` | 67 checks |
+| Database integrity | `bash lore/tests/test-db.sh` | 68 checks |
 | Suite manifest | `python3 tests/suite-manifest-test.py` | manifest matches audit |
 | Shared helpers | `bash tests/shared-helpers-test.sh` | Passed: every helper matches |
 | Query interface | `bash lore/tests/query-interface-test.sh` | 97 checks |
-| MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 8/8 checks |
+| MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 12/12 checks |
 | File conformance | `python3 lore/tests/conformance.py` | PASS |
 
 ## Troubleshooting
