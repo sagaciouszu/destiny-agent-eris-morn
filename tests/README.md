@@ -24,7 +24,7 @@ with its command and tier.
 | `multiturn-test.sh` | 10-turn emotional arc (10/10) |
 | `scenario-simulator.sh` | scenario response (sounds like Eris Morn) |
 | `conversation-test.sh` | SQLite conversation flow |
-| `sample-conversation-test.py` | recorded sample conversation |
+| `sample-conversation-test.py` | synthetic, non-canon sample conversation |
 | `golden-voice-test.sh` | locked voice snapshots from `golden-voice.json` |
 | `connection-test.sh` | grimoire database, query interface, lore/seal, MCP |
 | `memory-test.py` | per-user memory isolation |
@@ -69,7 +69,7 @@ bash tests/run-suites.sh     # suites.json entries only (additive)
   FAIL; the process exits 0 only at 55 or above. A negative case (Drifter slang)
   must exit non-zero.
 - **Golden snapshots:** each case in `golden-voice.json` pairs an agent, a tool
-  (`scorer` or `validator`), sample text and an expected verdict. The test turns
+  (`scorer` or `validator`), authored synthetic text and an expected verdict. The test turns
   the tool's exit code into a verdict (0 = pass, non-zero = fail) and compares
   it with the expectation, so a verdict flip fails the suite even when both runs
   exit non-zero or both exit 0.

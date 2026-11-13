@@ -15,7 +15,7 @@
     {
       "agent": "eris",
       "tool": "validator",
-      "text": "I am Eris Morn. The Darkness changes its environment as the Traveler did. Guardian, you are not alone.",
+      "text": "Guardian, the record does not answer this. I will not dress a guess as prophecy.",
       "expect": "pass"
     }
   ]

@@ -28,7 +28,7 @@ run() {
 SUITES=(
     "Module Completeness (16 checks)|bash $HERE/module-test.sh | grep -q 'Failed: 0'"
     "Quote Verification (0 unverified)|bash $HERE/quote-verify.sh | grep -q 'PASS: All quotes verified'"
-    "Voice Validator|bash $HERE/validate-response.sh 'I am Eris Morn. The Darkness changes its environment as the Traveler did. Guardian, you are not alone.' | grep -q 'PASS: Sounds like Eris Morn'"
+    "Voice Validator|bash $HERE/validate-response.sh 'Guardian, the record does not answer this. I will not dress a guess as prophecy.' | grep -q 'PASS: Sounds like Eris Morn'"
     "Voice Consistency|bash $HERE/voice-consistency.sh | grep -q 'VOICE CONSISTENCY CHECK COMPLETE'"
     "10-Turn Emotional Arc|bash $HERE/multiturn-test.sh | grep -q '10/10'"
     "Voice Scorer|python3 $HERE/voice-scorer.py 'I am Eris Morn. The Hive serve their gods with flesh and bone, Guardian.' >/dev/null"

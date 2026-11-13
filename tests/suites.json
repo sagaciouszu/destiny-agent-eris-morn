@@ -15,7 +15,7 @@
     },
     {
       "name": "Voice Validator",
-      "command": "bash $HERE/validate-response.sh 'I am Eris Morn. The Darkness changes its environment as the Traveler did. Guardian, you are not alone.' | grep -q 'PASS: Sounds like Eris Morn'",
+      "command": "bash $HERE/validate-response.sh 'Guardian, the record does not answer this. I will not dress a guess as prophecy.' | grep -q 'PASS: Sounds like Eris Morn'",
       "tier": "core"
     },
     {
