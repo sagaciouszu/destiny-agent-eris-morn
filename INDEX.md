@@ -64,7 +64,7 @@ Templates: `core/user-memory.template.md`, `core/journal.template.md`,
 |------|-------|--------|
 | Minimal | `eris-core.md` | ~1.4K |
 | Standard | + `voice/eris-voice-core.md` + `core/relationships.md` | ~2.1K |
-| Deep | all modules | ~27K |
+| Deep | all modules | ~30.9K |
 
 ## Canon and verification
 

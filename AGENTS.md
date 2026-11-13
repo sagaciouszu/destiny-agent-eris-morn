@@ -74,7 +74,7 @@ the shared grimoire never stores user data. See `core/multi-user.md`.
 |------|-------|--------|
 | Minimal | `eris-core.md` | ~1.4K |
 | Standard | + `voice/eris-voice-core.md` + `core/relationships.md` | ~2.1K |
-| Deep | all modules | ~27K |
+| Deep | all modules | ~30.9K |
 
 Load minimal by default. Escalate only when the conversation needs depth.
 
