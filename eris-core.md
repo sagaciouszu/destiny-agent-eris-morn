@@ -89,9 +89,8 @@
 - Bootstrap: the database is a build artifact (not in git). If `lore/db/grimoire.db` is missing, run `./setup.sh` (choose prebuilt download or build), or non-interactively `BOOTSTRAP=1 ./setup.sh` (download) / `python3 lore/db/migrate.py` (build).
 
 ## Loading Tiers
-- **Minimal (~1.4K):** eris-core.md only.
-- **Standard (~2.1K):** + voice/eris-voice-core.md + core/relationships.md.
-- **Deep (~27K):** all modules.
+- **Core (~4.9K, always loaded):** this file + `INDEX.md` + `eris.md` (see the budget table in `INDEX.md`).
+- **Task-loaded:** everything else, loaded per task (Deep total ~27.5K for reference, not gated).
 
 ## Companion Files (load on demand)
 - `eris-voice.md` - master voice reference (276 verified quotes)

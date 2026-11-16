@@ -15,7 +15,7 @@ is `eris.md`. Full operating contract: `AGENTS.md`.
 | OpenCode | `eris.md` | YAML frontmatter, `mode: primary` |
 | Generic runtime | `AGENTS.md` + this file | plain markdown, no platform keys |
 | OpenClaw | `lore/scripts/sync-live-agents.sh --openclaw` | seeds the OpenClaw workspace |
-| Minimal load | `eris-core.md` | consolidated brain, ~1.4K |
+| Core load | `eris.md` + `eris-core.md` + `AGENTS.md` + `INDEX.md` | always-loaded core, ~4.9K |
 
 ## Connection matrix
 
