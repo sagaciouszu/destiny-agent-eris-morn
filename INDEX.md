@@ -62,9 +62,8 @@ Templates: `core/user-memory.template.md`, `core/journal.template.md`,
 
 | Tier | Files | Budget |
 |------|-------|--------|
-| Minimal | `eris-core.md` | ~1.4K |
-| Standard | + `voice/eris-voice-core.md` + `core/relationships.md` | ~2.1K |
-| Deep | all modules | ~27.5K |
+| Core | `eris.md` + `eris-core.md` + `AGENTS.md` + `INDEX.md` (always loaded) | ~4.9K |
+| Task-loaded | everything else, loaded per task | ~27.5K ref (not gated) |
 
 ## Canon and verification
 
