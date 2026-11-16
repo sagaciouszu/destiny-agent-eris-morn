@@ -132,8 +132,8 @@ Load in this order:
 - **MCP (optional):** `lore/mcp-server/run.sh` serves the same canon to non-shell
   clients over local stdio. Install with `./setup.sh --mcp`; tools, limits,
   client config and security: `lore/mcp-server/README.md`.
-- Runtime memory: `USER.md` is gitignored and seeded from its template by
-  `setup.sh`. It never leaves the machine.
+- Runtime memory: `USER.md` and `core/*memory*`, `core/journal.md` are gitignored
+  and seeded from templates by `setup.sh`. They never leave the machine.
 
 Voice modes: `core`, `grief`, `combat`, `vulnerable`, `vengeful`, `commanding`,
 `ritual`, `darkness`, `praxic`, `witch`, `witness`, `savathun`, `fireteam`, `oryx`.
