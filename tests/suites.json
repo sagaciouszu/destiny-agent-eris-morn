@@ -1,7 +1,7 @@
 {
   "agent": "destiny-agent-eris-morn",
   "source": "tests/master-audit.sh",
-  "count": 22,
+  "count": 23,
   "suites": [
     {
       "name": "Module Completeness (16 checks)",
@@ -11,6 +11,11 @@
     {
       "name": "Quote Verification (0 unverified)",
       "command": "bash $HERE/quote-verify.sh | grep -q 'PASS: All quotes verified'",
+      "tier": "core"
+    },
+    {
+      "name": "Runtime Leak Guard (no memory in prompts)",
+      "command": "python3 $HERE/runtime-leak-guard.py",
       "tier": "core"
     },
     {
