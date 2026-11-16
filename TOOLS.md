@@ -44,7 +44,7 @@
 
 ## Verification
 
-- Full agent audit: `bash tests/master-audit.sh` (22 suites).
+- Full agent audit: `bash tests/master-audit.sh` (24 suites).
 - Quote verification: `bash tests/quote-verify.sh` (0 unverified
   against 1011 canonical Eris Morn lines).
 - Database integrity: `bash lore/tests/test-db.sh` (68 checks).

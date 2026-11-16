@@ -1,7 +1,7 @@
 {
   "agent": "destiny-agent-eris-morn",
   "source": "tests/master-audit.sh",
-  "count": 23,
+  "count": 24,
   "suites": [
     {
       "name": "Module Completeness (16 checks)",
@@ -116,6 +116,11 @@
     {
       "name": "No Personal Paths",
       "command": "python3 $LORE/tests/check-agent-structure.py paths $WORKSPACE",
+      "tier": "core"
+    },
+    {
+      "name": "Required Files",
+      "command": "python3 $LORE/tests/check-agent-structure.py required $WORKSPACE | grep -q 'required files: ok'",
       "tier": "core"
     }
   ]
