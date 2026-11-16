@@ -25,31 +25,24 @@ run() {
     fi
 }
 
-SUITES=(
-    "Module Completeness (16 checks)|bash $HERE/module-test.sh | grep -q 'Failed: 0'"
-    "Quote Verification (0 unverified)|bash $HERE/quote-verify.sh | grep -q 'PASS: All quotes verified'"
-    "Runtime Leak Guard (no memory in prompts)|python3 $HERE/runtime-leak-guard.py"
-    "Voice Validator|bash $HERE/validate-response.sh 'Guardian, the record does not answer this. I will not dress a guess as prophecy.' | grep -q 'PASS: Sounds like Eris Morn'"
-    "Voice Consistency|bash $HERE/voice-consistency.sh | grep -q 'VOICE CONSISTENCY CHECK COMPLETE'"
-    "10-Turn Emotional Arc|bash $HERE/multiturn-test.sh | grep -q '10/10'"
-    "Voice Scorer|python3 $HERE/voice-scorer.py 'I am Eris Morn. The Hive serve their gods with flesh and bone, Guardian.' >/dev/null"
-    "Voice Scorer Negative|! python3 $HERE/voice-scorer.py 'Heh. Nah, kid. Yeah, we gonna bank those motes, brother.' >/dev/null 2>&1"
-    "Scenario Simulator|bash $HERE/scenario-simulator.sh 'Tell me about the Hive' | grep -q 'Sounds like Eris Morn'"
-    "Conversation (SQLite)|bash $HERE/conversation-test.sh"
-    "Sample Conversation|python3 $HERE/sample-conversation-test.py"
-    "Golden Voice Snapshots|bash $HERE/golden-voice-test.sh | grep -q 'Failed: 0'"
-    "Suite Manifest|python3 $HERE/suite-manifest-test.py | grep -q 'manifest matches audit'"
-    "Shared Helpers|bash $HERE/shared-helpers-test.sh | grep -q 'Passed:.*Failed: 0'"
-    "Connection|bash $HERE/connection-test.sh | grep -q 'Failed: 0'"
-    "Memory Isolation|python3 $HERE/memory-test.py | grep -q 'memory isolation'"
-    "Multi-User Isolation|grep -q 'Never quote or summarize one user' $WORKSPACE/core/multi-user.md && grep -q 'memory.py' $WORKSPACE/core/multi-user.md"
-    "Persona Freshness|python3 $HERE/persona-freshness.py"
-    "Depends On Coverage|python3 $LORE/tests/check-agent-structure.py deps $WORKSPACE"
-    "Token Estimate Coverage|python3 $LORE/tests/check-agent-structure.py tokens $WORKSPACE"
-    "No Em-Dashes|python3 $LORE/tests/check-agent-structure.py dashes $WORKSPACE"
-    "INDEX Completeness|python3 $LORE/tests/check-agent-structure.py index $WORKSPACE"
-    "No Personal Paths|python3 $LORE/tests/check-agent-structure.py paths $WORKSPACE"
+# tests/suites.json is the single suite registry. Suites load from it at
+# runtime so there is exactly one list to maintain; do not add an inline
+# SUITES block here. (Bash 3.2 compatible: no mapfile; count kept in a
+# scalar because empty-array expansion trips set -u on old bash.)
+SUITES=()
+SUITE_COUNT=0
+while IFS= read -r line; do
+    if [ -n "$line" ]; then
+        SUITES+=("$line")
+        SUITE_COUNT=$((SUITE_COUNT + 1))
+    fi
+done < <(python3 - "$HERE/suites.json" <<'PY'
+import json, sys
+for s in json.load(open(sys.argv[1], encoding='utf-8'))['suites']:
+    print(f"{s['name']}|{s['command']}")
+PY
 )
+[ "$SUITE_COUNT" -gt 0 ] || { echo "FATAL: no suites loaded from tests/suites.json"; exit 1; }
 
 echo "============================================================"
 echo "  ERIS MORN - MASTER AUDIT (ALL CHECKS)"
