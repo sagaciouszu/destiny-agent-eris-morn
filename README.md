@@ -14,18 +14,29 @@
   <img src='https://img.shields.io/badge/Made%20with-Swarm%20Chitin-8B0000' alt='Made with Swarm Chitin'/>
 </p>
 
-**Version:** 0.14.7 | **Last push:** 2026-11-18 | **Status:** Active
+**Version:** 0.14.7 | **Last push:** 2026-11-20 | **Status:** Active
 
 **Documentation site:** <https://sagaciouszu.github.io/destiny-agent-grimoire-site/personas/eris/>
 **Limits and provenance:** <https://sagaciouszu.github.io/destiny-agent-grimoire-site/grimoire/limits/>
 
 > **Depends On:** INDEX.md
-> **Token Estimate:** ~2.1K tokens
+> **Token Estimate:** ~2.2K tokens
 
-A self-contained, platform-agnostic roleplay brain for Eris Morn: voice rules, memory,
-behavior modules and a verified quote corpus, backed by the Destiny Agent Grimoire
-database. Every shipped quote is checked against the canon; every suite is runnable.
+Eris Morn is the last survivor of the Hellmouth, a Hive expert who reads the Darkness like a ledger of debts. This repo is her voice, her memory and her verified lines, ready to drop into any agent runtime.
 
+## What it sounds like
+
+> **You:** Are you saying we should trust the Hive?
+> **Eris Morn:** "Absolutely not."
+
+> **You:** What does the Darkness do to a place?
+> **Eris Morn:** "The Darkness changes its environment as the Traveler did."
+
+> **You:** What do you need from me?
+> **Eris Morn:** "Guardian, you are not alone. Our foes seek to claim power from the Darkness."
+
+Every line is checked against the archive before it ships. Play the full scene:
+[persona page](https://sagaciouszu.github.io/destiny-agent-grimoire-site/personas/eris/) and [interactive demo](https://sagaciouszu.github.io/destiny-agent-grimoire-site/try/eris/).
 ## Quick start for Guardians
 
 **Step 1: clone.**
@@ -67,29 +78,6 @@ Reuse an existing checkout instead of cloning:
 bash tests/master-audit.sh
 ```
 
-### 🌑 Optional: MCP clients
-
-The adapter ships with the Grimoire archive, so one install serves every
-agent that mounts it. Install during onboarding:
-
-```bash
-./setup.sh --mcp
-```
-
-Or after the fact with `bash lore/mcp-server/install.sh`. Use `./setup.sh --no-mcp`
-to skip the prompt, or `./setup.sh --help` for options.
-
-Register the path it prints (`lore/mcp-server/run.sh`) in your client. Details:
-`lore/mcp-server/README.md`.
-
-OpenClaw: sync with `lore/scripts/sync-live-agents.sh --openclaw` (one workspace per agent; consult agents are wired in OpenClaw config).
-
-Point your runtime at `INDEX.md` (any agent runtime) or `eris.md` (OpenCode,
-YAML frontmatter, `mode: primary`; sync also installs a read-only `-consult` copy for peers). For
-OpenCode, deploy with `lore/scripts/sync-live-agents.sh`: it installs `eris.md`,
-keeps companions inert under `eris/`, keeps `lore/` outside `agents/` and
-registers this agent in `series/agents.json`. The installed ID is `eris`; set
-`default_agent` to `eris` in `~/.config/opencode/opencode.json`.
 
 ## Requirements
 
@@ -106,6 +94,16 @@ registers this agent in `series/agents.json`. The installed ID is `eris`; set
 No API keys, accounts or network access are required at runtime. If `sha256sum` is
 missing (stock macOS), `shasum -a 256` is an equivalent for the checksum step.
 
+## Connect it
+
+| Platform | Get running | More |
+|---|---|---|
+| OpenCode | `lore/scripts/sync-live-agents.sh`, then set `default_agent` to `eris` in `~/.config/opencode/opencode.json` | [Agent Setup](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Agent-Setup) |
+| OpenClaw | `lore/scripts/sync-live-agents.sh --openclaw` | [Agent Setup](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Agent-Setup) |
+| Any agent runtime | point it at `INDEX.md`; `AGENTS.md` carries the contract | [Agent Series](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Agent-Series) |
+| MCP client | `./setup.sh --mcp`, then register the printed `lore/mcp-server/run.sh` | [MCP Server](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/MCP-Server) |
+
+
 ## For agents
 
 Load in this order:
@@ -115,36 +113,10 @@ Load in this order:
 | Core | `eris.md` + `eris-core.md` + `AGENTS.md` + `INDEX.md` (always loaded) | ~4.9K |
 | Task-loaded | everything else, loaded per task | ~27.5K ref (not gated) |
 
-- Contract: `AGENTS.md` (platform-neutral rules, canon and quote policy).
-- Map: `INDEX.md` lists every module, tier and topic route.
-- Canon: `lore/db/grimoire.db` through `lore/` (a symlink or a clone). Never parse
-  `lore/source/` at runtime.
-- Caption tiers: caption-tier text is searchable canon but never part of persona canon; `v_speakers` includes caption-only speakers.
-- Quote safety: `python3 lore/db/query.py verify "<line>"` exits 1 when the line
-  is not canon. Add `--speaker "Name"` to require attribution and `--exact` to
-  reject fragments. An unverified line is never quoted.
-- Lookup: `search`, `character`, `character_info`, `item`, `book`, `transcript`,
-  `find_item`, `record`, `verify_many`, `list`, `stats` (MCP names; CLI uses
-  hyphens for `character-info`, `find-item`, `verify-many`). Every command
-  accepts `--json`; search returns snippets unless `--full`, with `--offset`/`--rank`.
-- Standard: `lore/STANDARDS.md` is the database and quote contract.
-- **MCP (optional):** `lore/mcp-server/run.sh` serves the same canon to non-shell
-  clients over local stdio. Install with `./setup.sh --mcp`; tools, limits,
-  client config and security: `lore/mcp-server/README.md`.
-- Runtime memory: `USER.md` and `core/*memory*`, `core/journal.md` are gitignored
-  and seeded from templates by `setup.sh`. They never leave the machine.
-
-Voice modes: `core`, `grief`, `combat`, `vulnerable`, `vengeful`, `commanding`,
-`ritual`, `darkness`, `praxic`, `witch`, `witness`, `savathun`, `fireteam`, `oryx`.
-
-Connection matrix:
-
-| From | To | Mechanism |
-|---|---|---|
-| this agent | canon | `lore/db/grimoire.db` via `lore/` (symlink or clone) |
-| `setup.sh` | canon repo | symlink or clone, then bootstrap the database |
-| runtime memory | local only | gitignored, seeded from template |
-| verification | canon repo | `lore/tests/agent-audit.sh eris` |
+- Contract: `AGENTS.md`; map: `INDEX.md`; canon: `lore/db/grimoire.db` through `lore/`.
+- Quote safety: `python3 lore/db/query.py verify "<line>" --speaker "Name"` exits 1 when the line is not canon. An unverified line is never quoted.
+- Runtime memory: `USER.md` and `core/*memory*`, `core/journal.md` are gitignored, seeded from templates, and never leave the machine.
+- Commands, filters and JSON output: [Query CLI](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Query-CLI) and [Reference Commands](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Reference-Commands).
 
 ## Repository layout
 
@@ -183,17 +155,13 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 ## Troubleshooting
 
 - **Database missing:** run `./setup.sh`, or `python3 lore/db/migrate.py`.
-- **`lore/` missing:** run `./setup.sh` (or pass a local grimoire path).
-- **Dangling `lore/` symlink:** `setup.sh` removes and recreates it.
-- **Audit says workspace unresolved:** run it through `lore/` from this
-  directory, or set `WORKSPACE=$PWD`.
-- **OpenCode does not list the agent:** rerun
-  `lore/scripts/sync-live-agents.sh`, then confirm the installed `eris.md` and
-  `default_agent` (`eris`) in `opencode.json`.
-- **MCP client shows no Grimoire tools:** run `./setup.sh --mcp`, then use the
-  absolute path to `lore/mcp-server/run.sh` in the client config.
-- **Degraded mode:** without the archive the persona files still work; canon
-  queries and quote verification do not.
+- **`lore/` missing or dangling:** run `./setup.sh` (or pass a local grimoire path).
+- **Audit says workspace unresolved:** run it through `lore/`, or set `WORKSPACE=$PWD`.
+- **OpenCode does not list the agent:** rerun `lore/scripts/sync-live-agents.sh` and check `default_agent`.
+- **MCP client shows no Grimoire tools:** run `./setup.sh --mcp` and use the absolute path to `lore/mcp-server/run.sh`.
+- **Degraded mode:** persona files still work without the archive; canon queries do not.
+
+More: [Troubleshooting](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Troubleshooting).
 
 ## License and attribution
 
